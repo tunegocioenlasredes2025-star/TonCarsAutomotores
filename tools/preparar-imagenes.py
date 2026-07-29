@@ -6,8 +6,13 @@ de vehículos a WebP + JPG (fallback).
 Uso:  python tools/preparar-imagenes.py
 Requiere: pip install pillow
 """
-from PIL import Image, ImageDraw
+import sys
+from PIL import Image, ImageDraw, ImageFilter
 from pathlib import Path
+
+# La consola de Windows usa cp1252 y revienta con acentos o flechas.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 RAIZ = Path(__file__).resolve().parent.parent
 ORIG = RAIZ / "_originales"
@@ -137,28 +142,27 @@ def hero():
     Si no, genera un fondo de marca para que la portada no quede vacía.
     """
     origen = next(
-        (ORIG / f"hero{e}" for e in (".png", ".jpg", ".jpeg", ".webp")
+        (ORIG / f"hero{e}" for e in (".jpeg", ".jpg", ".png", ".webp")
          if (ORIG / f"hero{e}").exists()),
         None,
     )
 
     if origen:
         im = Image.open(origen).convert("RGB")
-        # Recorte 16:10 centrado, tomando la franja central de la foto.
-        objetivo = 16 / 10
-        actual = im.width / im.height
-        if actual > objetivo:
-            nuevo = int(im.height * objetivo)
-            izq = (im.width - nuevo) // 2
-            im = im.crop((izq, 0, izq + nuevo, im.height))
-        else:
-            nuevo = int(im.width / objetivo)
-            # En fotos verticales conviene quedarse con la parte de arriba:
-            # ahí suele estar el paisaje, y abajo la ruta que tapa el velo.
-            arriba = int((im.height - nuevo) * 0.35)
-            im = im.crop((0, arriba, im.width, arriba + nuevo))
-        im = im.resize((1920, 1200), Image.LANCZOS)
-        print(f"hero: desde {origen.name}")
+        # No recortamos a una proporción fija: el encuadre lo decide el CSS con
+        # object-fit:cover, distinto en celular (vertical) y escritorio.
+        # Sólo escalamos, y con tope, porque agrandar de más no agrega detalle
+        # y sí agrega peso.
+        objetivo = min(1600, im.width * 2)
+        if objetivo != im.width:
+            alto = round(im.height * objetivo / im.width)
+            im = im.resize((objetivo, alto), Image.LANCZOS)
+            # Un poco de nitidez para compensar el reescalado.
+            im = im.filter(ImageFilter.UnsharpMask(radius=1.6, percent=105, threshold=3))
+        print(f"hero: desde {origen.name} → {im.width}x{im.height}")
+        if Image.open(origen).width < 1200:
+            print("       AVISO: la foto original es chica para un fondo a pantalla")
+            print("       completa. Se ve bien en celular; en escritorio queda blanda.")
     else:
         w, h = 1920, 1200
         im = Image.new("RGB", (w, h), (8, 11, 18))

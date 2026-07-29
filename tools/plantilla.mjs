@@ -22,7 +22,7 @@ export const SITIO = 'https://toncars.com.ar';
 export const HERO = {
   imagen: 'img/marca/hero.jpg',
   imagenWebp: 'img/marca/hero.webp',
-  video: null,
+  video: 'img/marca/hero.mp4',
   alt: 'Camino de montaña saliendo de un túnel, con el lago y la cordillera de fondo',
 };
 

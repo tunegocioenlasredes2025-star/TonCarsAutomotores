@@ -17,7 +17,7 @@ Este sitio está listo para publicar, pero hay tres cosas que dependen del clien
 |---|---|---|
 | 1 | **Cargar el stock real** (modelos, años, km, precios) | `js/vehiculos.js` |
 | 2 | **Subir las fotos reales** de cada unidad | `img/vehiculos/` |
-| 3 | **Poner la foto real del hero** | `_originales/hero.png` (ver punto 5) |
+| 3 | **Conseguir foto y video del hero en buena calidad** | `_originales/` (ver punto 5) |
 | 4 | **Confirmar el dominio final** | ver punto 7 |
 
 > **Importante sobre el catálogo actual.** El Instagram de Ton Cars no permite
@@ -146,7 +146,8 @@ El sitio publicado **no** los necesita: sólo generan archivos.
 node tools/generar-vehiculos.mjs    # páginas de vehículos + sitemap + robots
 node tools/construir.mjs            # páginas fijas + manifest
 node tools/generar-placeholders.mjs # placas de "fotos en preparación"
-python tools/preparar-imagenes.py   # logo, favicons y compresión de fotos
+python tools/preparar-imagenes.py   # logo, favicons, hero y compresión de fotos
+python tools/preparar-video.py      # video del hero (necesita ffmpeg)
 ```
 
 - **`tools/plantilla.mjs`** guarda el encabezado, el pie, los íconos y las metas
@@ -176,7 +177,7 @@ Todo se configura en la constante `HERO` de `tools/plantilla.mjs`:
 export const HERO = {
   imagen: 'img/marca/hero.jpg',
   imagenWebp: 'img/marca/hero.webp',
-  video: null,                       // ← poné acá el video cuando lo tengas
+  video: 'img/marca/hero.mp4',
   alt: '...',
 };
 ```
@@ -189,15 +190,29 @@ export const HERO = {
 3. Corré `node tools/construir.mjs`.
 
 > Si no hay `_originales/hero.*`, el script genera un fondo de marca provisorio
-> (degradado oscuro con grilla) para que la portada no quede vacía. **Es un
-> relleno: hay que reemplazarlo por la foto real.**
+> (degradado oscuro con grilla) para que la portada no quede vacía.
 
-### Activar el video
+### Cambiar el video
 
-1. Dejá el archivo en `img/marca/hero.mp4`. Recomendado: **MP4 H.264**, 1920×1080,
-   **menos de 6 MB** y entre 8 y 15 segundos en loop. Sin audio (va silenciado).
-2. En `tools/plantilla.mjs` poné `video: 'img/marca/hero.mp4'`.
-3. Corré `node tools/construir.mjs`.
+1. Dejá el archivo en `_originales/hero-video.mp4`.
+2. Corré `python tools/preparar-video.py`. Recorta la franja 16:9, saca el audio,
+   acorta el tramo, baja a 30 fps y activa `faststart`. Necesita **ffmpeg**.
+3. Los parámetros (tramo, recorte vertical, ancho) están arriba de todo en
+   `tools/preparar-video.py`, comentados uno por uno.
+
+### Sobre la calidad del material actual
+
+Los archivos que hay hoy vienen de un celular y son **verticales y chicos**:
+
+| Archivo | Original | Se ve bien en |
+|---|---|---|
+| `_originales/hero.jpeg` | 424 × 471 px | Celular. En escritorio queda blanda. |
+| `_originales/hero-video.mp4` | 464 × 832 px, vertical | Aceptable, pero es un recorte. |
+
+El velo oscuro disimula bastante, pero **si consiguen la foto y el video
+originales en buena calidad (horizontales, 1920 px o más), la portada mejora
+mucho**. El pipeline ya está armado: se reemplazan los dos archivos en
+`_originales/`, se corren los dos scripts y listo.
 
 ---
 
