@@ -202,17 +202,20 @@ export const HERO = {
 
 ### Sobre la calidad del material actual
 
-Los archivos que hay hoy vienen de un celular y son **verticales y chicos**:
-
 | Archivo | Original | Se ve bien en |
 |---|---|---|
-| `_originales/hero.jpeg` | 424 × 471 px | Celular. En escritorio queda blanda. |
-| `_originales/hero-video.mp4` | 464 × 832 px, vertical | Aceptable, pero es un recorte. |
+| `_originales/hero.jpeg` (foto de celular) | 424 × 471 px | Celular. En escritorio queda blanda. |
+| `_originales/hero-video-potrerillos.webm` (video de PC) | 1246 × 700 px, horizontal | Escritorio, con buena calidad. |
 
-El velo oscuro disimula bastante, pero **si consiguen la foto y el video
-originales en buena calidad (horizontales, 1920 px o más), la portada mejora
-mucho**. El pipeline ya está armado: se reemplazan los dos archivos en
-`_originales/`, se corren los dos scripts y listo.
+El video de Potrerillos venía con marca de agua de un grabador de pantalla
+(*SEVEN WAYS* arriba a la derecha y un cartel abajo). El script las saca con un
+recorte de bordes (constante `RECORTE` en `tools/preparar-video.py`).
+
+La **foto de celular** sigue siendo chica para un fondo a pantalla completa: en
+escritorio se le aplica un desenfoque leve que la disimula como profundidad de
+campo, pero **si consiguen una foto horizontal de 1920 px o más, la portada
+mejora**. Se reemplaza `_originales/hero.jpeg`, se corre `preparar-imagenes.py`
+y `construir.mjs`.
 
 ---
 

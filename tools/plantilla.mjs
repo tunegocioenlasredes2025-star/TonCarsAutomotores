@@ -134,7 +134,7 @@ export function cabezaHtml(o) {
   const imagen = `${SITIO}/${o.imagen || 'img/marca/og.jpg'}`;
 
   const preloads = (o.preload || [])
-    .map((p) => `<link rel="preload" as="image" href="${r}${p}" fetchpriority="high">`)
+    .map((p) => `<link rel="preload" as="image" href="${r}${p}${v(p)}" fetchpriority="high">`)
     .join('\n');
 
   const schema = (o.schema || []).map((s) => `<script type="application/ld+json">\n${s}\n</script>`).join('\n');
@@ -360,19 +360,19 @@ export function heroMediaHtml() {
   if (!HERO.imagen) return '';
 
   const fuentes = HERO.imagenWebp
-    ? `<source srcset="${HERO.imagenWebp}" type="image/webp">`
+    ? `<source srcset="${HERO.imagenWebp}${v(HERO.imagenWebp)}" type="image/webp">`
     : '';
 
   const video = HERO.video
     ? `
-    <video class="hero__video" src="${HERO.video}" muted loop playsinline preload="none"
+    <video class="hero__video" src="${HERO.video}${v(HERO.video)}" muted loop playsinline preload="none"
            aria-hidden="true" tabindex="-1"></video>`
     : '';
 
   return `<div class="hero__media" aria-hidden="true">
     <picture>
       ${fuentes}
-      <img class="hero__imagen" src="${HERO.imagen}" alt="" width="1600" height="1000"
+      <img class="hero__imagen" src="${HERO.imagen}${v(HERO.imagen)}" alt="" width="1600" height="1000"
            fetchpriority="high" decoding="async">
     </picture>${video}
   </div>
