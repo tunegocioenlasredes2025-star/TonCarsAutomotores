@@ -84,11 +84,18 @@ const iconos = {
   const heroMedia = document.querySelector('.hero__media');
   if (heroMedia) {
     /* El video sólo se descarga en escritorio. En celular ni se pide: manda
-       la foto y no gastamos datos del visitante. */
+       la foto y no gastamos datos del visitante.
+
+       Se reproduce aunque el visitante tenga activado "reducir movimiento":
+       es un plano de paisaje suave, con velo encima, y es contenido de marca
+       (no un efecto decorativo). Las animaciones que sí pueden marear —zoom,
+       grano y parallax— se siguen desactivando en ese caso, más abajo y en el
+       CSS. Sin esto, quien tenga la preferencia activada (Windows la enciende
+       sola con el ahorro de batería) vería sólo la foto fija. */
     const video = heroMedia.querySelector('.hero__video');
     const esEscritorio = window.matchMedia('(min-width: 900px)');
 
-    if (video && esEscritorio.matches && !menosMovimiento) {
+    if (video && esEscritorio.matches) {
       video.preload = 'auto';
       video.addEventListener('canplay', () => {
         video.play().then(
