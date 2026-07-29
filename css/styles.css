@@ -815,6 +815,23 @@ body.sin-scroll {
   }
 }
 
+/* El material de origen es de celular y chico: en pantalla grande hay que
+   agrandarlo ~3x y se nota blando. Un desenfoque leve lo convierte en
+   profundidad de campo a propósito, que es como se ve un hero cinematográfico,
+   en vez de leerse como una foto mal escalada. En celular no se aplica: ahí la
+   imagen está casi a resolución nativa y se ve nítida.
+   El scale extra evita que el desenfoque deje los bordes transparentes. */
+@media (min-width: 900px) {
+  .hero__imagen,
+  .hero__video {
+    filter: saturate(1.1) contrast(1.08) blur(2.5px);
+  }
+
+  .hero__video {
+    transform: scale(1.04);
+  }
+}
+
 /* Velo de legibilidad: sin esto el texto blanco se pierde sobre la foto. */
 .hero__velo {
   position: absolute;
