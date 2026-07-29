@@ -864,6 +864,9 @@ body.sin-scroll {
   display: grid;
   justify-items: center;
   max-width: 900px;
+  /* Sin esto el bloque se apoya a la izquierda del contenedor y todo el hero
+     queda corrido: en 1440px eran 130px de desvío. */
+  margin-inline: auto;
 }
 
 .hero--portada .hero__logo {
