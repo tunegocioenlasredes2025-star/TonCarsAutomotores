@@ -78,7 +78,7 @@ def main():
         "-vf", filtros,
         "-c:v", "libx264",
         "-profile:v", "high",
-        "-crf", "27",
+        "-crf", "22",   # menos compresion = mas nitidez (27 era calidad media)
         "-preset", "slow",
         "-pix_fmt", "yuv420p",          # compatibilidad con Safari
         "-movflags", "+faststart",
@@ -90,8 +90,8 @@ def main():
 
     peso = DESTINO.stat().st_size / 1_000_000
     print(f"  img/marca/hero.mp4 — {peso:.2f} MB, {DURACION}s, {ANCHO}px de ancho")
-    if peso > 4:
-        print("  AVISO: pesa más de 4 MB. Bajá DURACION o subí el CRF.")
+    if peso > 6:
+        print("  AVISO: pesa más de 6 MB. Bajá DURACION o subí el CRF.")
 
 
 if __name__ == "__main__":
