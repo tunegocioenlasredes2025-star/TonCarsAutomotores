@@ -248,11 +248,27 @@ sitemap. Está definido en **un solo lugar**: la constante `SITIO` en
 node tools/construir.mjs && node tools/generar-vehiculos.mjs
 ```
 
-**Vercel:** arrastrar la carpeta, o conectar el repositorio. No hace falta
-comando de build ni carpeta de salida: es un sitio estático plano.
+**Vercel:** lo mejor es **conectar el repositorio de GitHub** (Settings → Git),
+así cada `git push` publica solo. No hace falta comando de build ni carpeta de
+salida: es un sitio estático plano.
 
 No hace falta subir `_originales/` ni `tools/` — el `robots.txt` ya los excluye
 de los buscadores, pero se pueden borrar del deploy sin romper nada.
+
+### `vercel.json` — qué hace cada regla
+
+El archivo controla la caché y las URLs limpias. **Ojo: es JSON puro, no admite
+comentarios ni campos extra** (un campo `"comment"` de más hace fallar el deploy
+entero). Por eso la explicación va acá:
+
+- **CSS y JS** → `max-age=0, must-revalidate`. Llevan `?v=<hash>` en la URL
+  (ver punto 8), así que un cambio siempre genera una URL nueva y se ve al
+  instante.
+- **Imágenes y video** → una semana de caché con `stale-while-revalidate`. No
+  van como `immutable` porque sus nombres (`hero.jpg`, `hero.mp4`) se reemplazan.
+- **HTML** → nunca se cachea: es lo que trae las URLs versionadas de CSS y JS.
+- **redirects** → `/catalogo/index.html` se redirige a `/catalogo/` para que se
+  indexe la URL corta.
 
 ---
 
