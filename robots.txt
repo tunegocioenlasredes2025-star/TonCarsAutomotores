@@ -1,0 +1,8 @@
+# Ton Cars Automotores
+User-agent: *
+Allow: /
+
+Disallow: /tools/
+Disallow: /_originales/
+
+Sitemap: https://toncars.com.ar/sitemap.xml

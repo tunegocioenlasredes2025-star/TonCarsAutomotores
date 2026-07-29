@@ -1,0 +1,11 @@
+# Archivos crudos que entregó el cliente (no hacen falta en el sitio publicado)
+_originales/
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor
+.vscode/
+.idea/

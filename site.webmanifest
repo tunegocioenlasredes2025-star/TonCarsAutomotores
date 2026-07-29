@@ -1,0 +1,28 @@
+{
+  "name": "Ton Cars Automotores",
+  "short_name": "Ton Cars",
+  "description": "Agencia multimarca en Ingeniero Maschwitz. Autos, utilitarios y motos.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080b12",
+  "theme_color": "#080b12",
+  "lang": "es-AR",
+  "icons": [
+    {
+      "src": "/favicon/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
