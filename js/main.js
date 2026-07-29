@@ -29,6 +29,102 @@ const iconos = {
   const RAIZ = document.body.dataset.raiz ?? '';
   const url = (ruta) => RAIZ + ruta;
 
+  const menosMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ------------------------------------------------------- Cortina de carga */
+  /* Se muestra sólo la primera visita de la sesión y como mucho ~2 s. El CSS
+     tiene además una animación de salida automática, así que aunque este
+     bloque falle la cortina nunca deja la página tapada. */
+  const cortina = document.getElementById('cortina');
+  if (cortina) {
+    const yaEntro = sessionStorage.getItem('tc-visto') === '1';
+
+    if (yaEntro || menosMovimiento) {
+      cortina.remove();
+    } else {
+      document.documentElement.classList.add('cargando');
+      sessionStorage.setItem('tc-visto', '1');
+
+      const cerrar = () => {
+        if (!cortina.isConnected) return;
+        cortina.classList.add('saliendo');
+        document.documentElement.classList.remove('cargando');
+        setTimeout(() => cortina.remove(), 800);
+      };
+
+      // Lo que ocurra primero: la carga completa (con un mínimo para que se
+      // llegue a ver) o el tope de seguridad.
+      const tope = setTimeout(cerrar, 2000);
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          clearTimeout(tope);
+          cerrar();
+        }, 550);
+      });
+    }
+  }
+
+  /* ------------------------------- WhatsApp flotante diferido en la portada */
+  const waFlotante = document.querySelector('.wa-flotante');
+  const heroPortada = document.querySelector('.hero--portada');
+
+  if (waFlotante && heroPortada) {
+    waFlotante.classList.add('wa-flotante--diferido');
+
+    const alternar = () => {
+      const pasoElHero = window.scrollY > heroPortada.offsetHeight * 0.72;
+      waFlotante.classList.toggle('visible', pasoElHero);
+    };
+
+    alternar();
+    window.addEventListener('scroll', alternar, { passive: true });
+  }
+
+  /* ------------------------------------------------- Hero: video y parallax */
+  const heroMedia = document.querySelector('.hero__media');
+  if (heroMedia) {
+    /* El video sólo se descarga en escritorio. En celular ni se pide: manda
+       la foto y no gastamos datos del visitante. */
+    const video = heroMedia.querySelector('.hero__video');
+    const esEscritorio = window.matchMedia('(min-width: 900px)');
+
+    if (video && esEscritorio.matches && !menosMovimiento) {
+      video.preload = 'auto';
+      video.addEventListener('canplay', () => {
+        video.play().then(
+          () => video.classList.add('cargado'),
+          () => {} // si el navegador bloquea el autoplay, queda la foto
+        );
+      });
+      video.addEventListener('error', () => video.remove());
+      video.load();
+    }
+
+    /* Parallax suave: la media se mueve a menos velocidad que el scroll. */
+    if (!menosMovimiento) {
+      const hero = heroMedia.closest('.hero');
+      let pendiente = false;
+
+      const mover = () => {
+        pendiente = false;
+        const y = window.scrollY;
+        if (y > hero.offsetHeight) return; // fuera de pantalla, no calculamos
+        heroMedia.style.transform = `translate3d(0, ${y * 0.32}px, 0)`;
+      };
+
+      window.addEventListener(
+        'scroll',
+        () => {
+          if (pendiente) return;
+          pendiente = true;
+          requestAnimationFrame(mover);
+        },
+        { passive: true }
+      );
+      mover();
+    }
+  }
+
   /* ---------------------------------------------------------------- Header */
   const encabezado = document.querySelector('.encabezado');
   if (encabezado) {

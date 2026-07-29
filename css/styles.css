@@ -741,6 +741,213 @@ body.sin-scroll {
   -webkit-mask-image: radial-gradient(120% 90% at 50% 20%, #000 25%, transparent 78%);
 }
 
+/* --------------------------------------------------------------------------
+   7 bis. Hero de portada — media a pantalla completa
+   Imagen de fondo en celular, video en escritorio (cuando existe el archivo).
+   -------------------------------------------------------------------------- */
+.hero--portada > .contenedor {
+  position: relative;
+  z-index: 3;
+}
+
+.hero--portada {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--header-h) + 54px);
+  padding-bottom: 96px;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .hero--portada {
+    padding-bottom: 120px;
+  }
+}
+
+/* Capa de media */
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: var(--negro);
+  will-change: transform;
+}
+
+.hero__imagen,
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.04);
+}
+
+.hero__imagen {
+  opacity: 0.72;
+  /* Zoom lento y continuo: el plano nunca queda del todo quieto. */
+  animation: zoomLento 24s ease-in-out infinite alternate;
+}
+
+.hero__video {
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 1.4s var(--ease);
+}
+
+.hero__video.cargado {
+  opacity: 0.72;
+}
+
+/* Cuando el video ya se ve, la foto se apaga por debajo. */
+.hero__media:has(.hero__video.cargado) .hero__imagen {
+  opacity: 0;
+  transition: opacity 1.4s var(--ease);
+}
+
+/* El video es sólo para escritorio: en celular manda la foto. */
+@media (max-width: 899px) {
+  .hero__video {
+    display: none !important;
+  }
+}
+
+/* Velo de legibilidad: sin esto el texto blanco se pierde sobre la foto. */
+.hero__velo {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(5, 7, 12, 0.82) 0%, rgba(5, 7, 12, 0.35) 30%,
+      rgba(5, 7, 12, 0.45) 62%, rgba(5, 7, 12, 0.95) 100%),
+    radial-gradient(70% 60% at 50% 45%, rgba(5, 7, 12, 0) 0%, rgba(5, 7, 12, 0.55) 100%),
+    radial-gradient(60% 50% at 88% 8%, rgba(19, 66, 164, 0.3), transparent 65%),
+    radial-gradient(55% 45% at 8% 92%, rgba(220, 11, 8, 0.26), transparent 65%);
+}
+
+/* Grano finísimo, para que el degradado no haga bandas en pantallas grandes */
+.hero__grano {
+  position: absolute;
+  inset: -12%;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.32;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  animation: granoMovido 7s steps(4) infinite;
+}
+
+.hero__interno {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  justify-items: center;
+  max-width: 900px;
+}
+
+.hero--portada .hero__logo {
+  width: min(240px, 58vw);
+  margin-bottom: 22px;
+}
+
+@media (min-width: 900px) {
+  .hero--portada .hero__logo {
+    width: min(370px, 30vw);
+    margin-bottom: 28px;
+  }
+}
+
+/* En celular apretamos un poco todo para que los dos botones entren
+   arriba del pliegue, sin obligar a hacer scroll para ver el CTA. */
+@media (max-width: 899px) {
+  .hero--portada {
+    padding-top: calc(var(--header-h) + 26px);
+    padding-bottom: 54px;
+  }
+
+  .hero--portada h1 {
+    margin-bottom: 16px;
+  }
+
+  .hero--portada .hero__sub {
+    margin-bottom: 24px;
+  }
+}
+
+.hero--portada h1 {
+  text-shadow: 0 4px 34px rgba(0, 0, 0, 0.55);
+}
+
+.hero--portada .hero__sub {
+  margin-inline: auto;
+  color: #ced5e2;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.6);
+}
+
+.hero--portada .acciones {
+  justify-content: center;
+}
+
+/* Indicador de scroll */
+.hero__scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  z-index: 4;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  transform: translateX(-50%);
+  font-family: 'Sora', sans-serif;
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--texto-2);
+  transition: color var(--t);
+}
+
+.hero__scroll:hover {
+  color: #fff;
+}
+
+.hero__scroll span {
+  position: relative;
+  display: block;
+  width: 1px;
+  height: 52px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.hero__scroll span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  background: var(--grad-texto);
+  animation: bajarScroll 2.1s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@media (max-width: 560px) {
+  .hero__scroll {
+    display: none;
+  }
+}
+
+/* Franja de indicadores, ahora fuera del hero */
+.banda-indicadores {
+  position: relative;
+  z-index: 3;
+  margin-top: -46px;
+  padding-bottom: var(--seccion);
+}
+
 .hero__grilla {
   display: grid;
   gap: 40px;
@@ -2218,6 +2425,28 @@ textarea.campo {
   background: #24c35f;
 }
 
+/* En la portada el hero ya tiene su propio botón de WhatsApp: el flotante
+   sobra y encima se pisa con el CTA. Aparece recién al pasar el hero. */
+.wa-flotante--diferido {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px) scale(0.9);
+}
+
+.wa-flotante--diferido.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.wa-flotante--diferido::before {
+  animation: none;
+}
+
+.wa-flotante--diferido.visible::before {
+  animation: pulso 2.6s var(--ease) infinite;
+}
+
 .wa-flotante svg {
   width: 26px;
   height: 26px;
@@ -2261,6 +2490,75 @@ textarea.campo {
 }
 
 /* --------------------------------------------------------------------------
+   17 bis. Cortina de carga
+   Sólo aparece si el JS la habilita (html.cargando). Además se autodestruye
+   por CSS a los 2,2 s: pase lo que pase, nunca deja la página tapada.
+   -------------------------------------------------------------------------- */
+.cortina {
+  display: none;
+}
+
+html.cargando .cortina {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 26px;
+  background: var(--negro);
+  animation: cortinaFuera 0.7s var(--ease) 2.2s forwards;
+}
+
+html.cargando {
+  overflow: hidden;
+}
+
+.cortina.saliendo {
+  animation: cortinaFuera 0.7s var(--ease) forwards !important;
+}
+
+.cortina__logo {
+  width: min(260px, 62vw);
+  animation: subir 0.8s var(--ease-out) both;
+}
+
+.cortina__barra {
+  position: relative;
+  width: min(200px, 46vw);
+  height: 2px;
+  border-radius: 2px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.cortina__barra::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--grad-texto);
+  transform-origin: left;
+  animation: cargarBarra 2s var(--ease-out) forwards;
+}
+
+@keyframes cargarBarra {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes cortinaFuera {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* --------------------------------------------------------------------------
    18. Animaciones de entrada
    -------------------------------------------------------------------------- */
 @keyframes subir {
@@ -2274,13 +2572,113 @@ textarea.campo {
   }
 }
 
+@keyframes bajar {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes zoomLento {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1.16);
+  }
+}
+
+@keyframes granoMovido {
+  0% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-3%, 2.5%);
+  }
+  66% {
+    transform: translate(2.5%, -3%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes bajarScroll {
+  0% {
+    top: -60%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+/* Brillo que recorre el texto con degradado */
+@keyframes brillo {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Entrada escalonada de los elementos del hero de portada */
+.hero--portada .hero__logo {
+  animation: subir 1s var(--ease-out) 0.15s both;
+}
+
+.hero--portada h1 {
+  animation: subir 1s var(--ease-out) 0.32s both;
+}
+
+.hero--portada .hero__sub {
+  animation: subir 1s var(--ease-out) 0.48s both;
+}
+
+.hero--portada .acciones {
+  animation: subir 1s var(--ease-out) 0.62s both;
+}
+
+.hero__scroll {
+  animation: bajar 1s var(--ease-out) 1s both;
+}
+
+.banda-indicadores .indicadores {
+  animation: subir 1s var(--ease-out) 0.78s both;
+}
+
+/* El degradado del titular se mueve muy lento, como un reflejo metálico */
+.hero--portada .destacado {
+  background-image: linear-gradient(
+    100deg,
+    #ff3b33 0%,
+    var(--rojo) 22%,
+    #ffffff 42%,
+    #3d80f0 62%,
+    var(--rojo) 84%,
+    #ff3b33 100%
+  );
+  background-size: 200% auto;
+  animation: brillo 7s linear infinite;
+}
+
 /* El estado oculto se aplica sólo si el navegador ejecutó el script de <head>.
    Sin JavaScript (o si algo falla al cargarlo) el contenido se ve igual: nunca
    dejamos secciones enteras en opacity 0 dependiendo de un observador. */
 .js .revelar {
   opacity: 0;
-  transform: translateY(26px);
-  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  transform: translateY(40px);
+  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1), transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 767px) {
+  .js .revelar {
+    transform: translateY(20px);
+  }
 }
 
 .js .revelar.visible {
@@ -2317,6 +2715,23 @@ textarea.campo {
   .js .revelar {
     opacity: 1;
     transform: none;
+  }
+
+  /* Nada de zoom, grano ni cortina para quien pidió menos movimiento. */
+  .hero__imagen,
+  .hero__grano,
+  .hero__scroll span::after,
+  .hero--portada .destacado {
+    animation: none !important;
+  }
+
+  .cortina,
+  html.cargando .cortina {
+    display: none !important;
+  }
+
+  html.cargando {
+    overflow: auto;
   }
 }
 

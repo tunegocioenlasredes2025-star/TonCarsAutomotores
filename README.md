@@ -17,7 +17,8 @@ Este sitio está listo para publicar, pero hay tres cosas que dependen del clien
 |---|---|---|
 | 1 | **Cargar el stock real** (modelos, años, km, precios) | `js/vehiculos.js` |
 | 2 | **Subir las fotos reales** de cada unidad | `img/vehiculos/` |
-| 3 | **Confirmar el dominio final** | ver punto 6 |
+| 3 | **Poner la foto real del hero** | `_originales/hero.png` (ver punto 5) |
+| 4 | **Confirmar el dominio final** | ver punto 7 |
 
 > **Importante sobre el catálogo actual.** El Instagram de Ton Cars no permite
 > leer la ficha de cada unidad sin iniciar sesión, así que sólo se pudieron
@@ -82,7 +83,7 @@ es la versión corta.
 
 ### Agregar una unidad
 
-1. Copiá las fotos a `img/vehiculos/` (ver punto 5 para optimizarlas).
+1. Copiá las fotos a `img/vehiculos/` (ver punto 6 para optimizarlas).
 2. Abrí `js/vehiculos.js` y agregá un bloque al array `VEHICULOS`:
 
 ```js
@@ -158,7 +159,49 @@ python tools/preparar-imagenes.py   # logo, favicons y compresión de fotos
 
 ---
 
-## 5. Fotos de vehículos
+## 5. Hero de la portada (foto y video)
+
+La portada abre a pantalla completa con una imagen de fondo que hace un zoom
+lento y continuo, más un parallax suave al scrollear.
+
+- **En celular** se ve **siempre la imagen**. El video ni se descarga, para no
+  gastar los datos del visitante.
+- **En escritorio** (a partir de 900 px) el video se superpone y aparece con un
+  fundido cuando termina de cargar. Si falla o el navegador bloquea el autoplay,
+  queda la imagen: nunca se ve un hueco negro.
+
+Todo se configura en la constante `HERO` de `tools/plantilla.mjs`:
+
+```js
+export const HERO = {
+  imagen: 'img/marca/hero.jpg',
+  imagenWebp: 'img/marca/hero.webp',
+  video: null,                       // ← poné acá el video cuando lo tengas
+  alt: '...',
+};
+```
+
+### Cambiar la imagen de fondo
+
+1. Dejá la foto en `_originales/hero.png` (o `.jpg`).
+2. Corré `python tools/preparar-imagenes.py`. Recorta a 16:10, redimensiona a
+   1920 px y genera el `.webp` y el `.jpg`.
+3. Corré `node tools/construir.mjs`.
+
+> Si no hay `_originales/hero.*`, el script genera un fondo de marca provisorio
+> (degradado oscuro con grilla) para que la portada no quede vacía. **Es un
+> relleno: hay que reemplazarlo por la foto real.**
+
+### Activar el video
+
+1. Dejá el archivo en `img/marca/hero.mp4`. Recomendado: **MP4 H.264**, 1920×1080,
+   **menos de 6 MB** y entre 8 y 15 segundos en loop. Sin audio (va silenciado).
+2. En `tools/plantilla.mjs` poné `video: 'img/marca/hero.mp4'`.
+3. Corré `node tools/construir.mjs`.
+
+---
+
+## 6. Fotos de vehículos
 
 Para que el sitio siga cargando rápido:
 
@@ -174,7 +217,7 @@ La forma más rápida de convertirlas es agregar la unidad a
 
 ---
 
-## 6. Publicación
+## 7. Publicación
 
 El sitio es estático: se sube la carpeta entera y funciona.
 
@@ -195,7 +238,7 @@ de los buscadores, pero se pueden borrar del deploy sin romper nada.
 
 ---
 
-## 7. SEO
+## 8. SEO
 
 Ya está resuelto:
 
@@ -218,7 +261,7 @@ Ya está resuelto:
 
 ---
 
-## 8. Diseño
+## 9. Diseño
 
 - **Tipografía:** Sora para títulos, Manrope para texto. Se cargan desde Google
   Fonts con `preconnect` y `display=swap`. Si en algún momento se quiere
@@ -231,7 +274,7 @@ Ya está resuelto:
 
 ---
 
-## 9. Datos del negocio
+## 10. Datos del negocio
 
 | | |
 |---|---|

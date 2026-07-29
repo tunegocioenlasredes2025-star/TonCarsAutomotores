@@ -14,10 +14,12 @@ import { fileURLToPath } from 'node:url';
 import {
   SITIO,
   NEGOCIO,
+  HERO,
   ICO,
   paginaHtml,
   franjaCta,
   heroInterno,
+  heroMediaHtml,
 } from './plantilla.mjs';
 
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -112,46 +114,40 @@ function migas(items) {
    HOME
    ========================================================================== */
 const HOME = `
-<section class="hero">
-  <div class="hero__fondo" aria-hidden="true"></div>
-  <div class="hero__rejilla" aria-hidden="true"></div>
+<section class="hero hero--portada">
+  ${heroMediaHtml()}
 
   <div class="contenedor">
-    <div class="hero__grilla">
-      <div>
-        <img class="hero__logo" src="img/marca/logo.webp" alt="${NEGOCIO.nombre}"
-             width="900" height="672" fetchpriority="high" decoding="async">
+    <div class="hero__interno">
+      <img class="hero__logo" src="img/marca/logo.webp" alt="${NEGOCIO.nombre}"
+           width="900" height="672" fetchpriority="high" decoding="async">
 
-        <h1>Tu próximo vehículo,<br><span class="destacado">con información clara.</span></h1>
+      <h1>Tu próximo vehículo,<br><span class="destacado">con información clara.</span></h1>
 
-        <p class="plomo hero__sub">
-          Agencia multimarca en ${NEGOCIO.localidad}, atendida por sus dueños.
-          Unidades seleccionadas, precios conversados de frente y una operación
-          que entendés de principio a fin.
-        </p>
+      <p class="plomo hero__sub">
+        Agencia multimarca en ${NEGOCIO.localidad}, atendida por sus dueños.
+        Unidades seleccionadas, precios conversados de frente y una operación
+        que entendés de principio a fin.
+      </p>
 
-        <div class="acciones acciones--apilada">
-          <a class="btn btn--rojo btn--grande" href="catalogo/index.html">Ver vehículos ${ICO.flecha}</a>
-          <a class="btn btn--fantasma btn--grande" data-wa href="#" target="_blank" rel="noopener">
-            ${ICO.wa} Consultar por WhatsApp
-          </a>
-        </div>
-      </div>
-
-      <div class="hero__medios">
-        <figure class="hero__foto">
-          <img src="img/vehiculos/toyota-yaris-01.webp"
-               alt="Toyota Yaris XLS gris exhibido en el salón de Ton Cars"
-               width="1080" height="1350" fetchpriority="high" decoding="async">
-          <figcaption class="hero__chapa">
-            <strong>Toyota Yaris 1.5 XLS CVT</strong>
-            <span>2019 · Detailing incluido</span>
-          </figcaption>
-        </figure>
+      <div class="acciones acciones--apilada">
+        <a class="btn btn--rojo btn--grande" href="catalogo/index.html">Ver vehículos ${ICO.flecha}</a>
+        <a class="btn btn--fantasma btn--grande" data-wa href="#" target="_blank" rel="noopener">
+          ${ICO.wa} Consultar por WhatsApp
+        </a>
       </div>
     </div>
+  </div>
 
-    <dl class="indicadores revelar">
+  <a class="hero__scroll" href="#destacados" aria-label="Ir a las unidades disponibles">
+    <span></span>
+    Deslizá
+  </a>
+</section>
+
+<section class="banda-indicadores">
+  <div class="contenedor">
+    <dl class="indicadores">
       <div class="indicador">
         <dd class="indicador__valor">100%</dd>
         <dt class="indicador__etiqueta">Financiación disponible, sujeta a evaluación</dt>
@@ -924,7 +920,8 @@ escribir(
     titulo: 'Ton Cars Automotores | Agencia multimarca en Ingeniero Maschwitz',
     descripcion:
       'Agencia multimarca atendida por sus dueños en Ingeniero Maschwitz. Autos usados y seminuevos seleccionados, motos, financiación y permutas. Consultá por WhatsApp al 11 3425-3399.',
-    preload: ['img/marca/logo.webp', 'img/vehiculos/toyota-yaris-01.webp'],
+    cortina: true,
+    preload: ['img/marca/logo.webp', HERO.imagenWebp || HERO.imagen].filter(Boolean),
     schema: [
       SCHEMA_NEGOCIO,
       JSON.stringify(

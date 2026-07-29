@@ -8,6 +8,24 @@
 
 export const SITIO = 'https://toncars.com.ar';
 
+/* --------------------------------------------------------------- Hero
+   Media de la portada.
+
+   `imagen`  se ve siempre; en celular es lo único que se muestra.
+   `video`   se superpone SÓLO en escritorio (>=900px) y aparece con un fundido
+             cuando termina de cargar. Poné null mientras no exista el archivo:
+             así no se emite la etiqueta y no se pide un recurso que no está.
+
+   Para activar el video: dejá el archivo en img/marca/ y escribí acá el nombre,
+   por ejemplo  video: 'img/marca/hero.mp4'.  Después: node tools/construir.mjs
+   -------------------------------------------------------------------- */
+export const HERO = {
+  imagen: 'img/marca/hero.jpg',
+  imagenWebp: 'img/marca/hero.webp',
+  video: null,
+  alt: 'Camino de montaña saliendo de un túnel, con el lago y la cordillera de fondo',
+};
+
 export const NEGOCIO = {
   nombre: 'Ton Cars Automotores',
   slogan: 'Confianza que te mueve',
@@ -260,7 +278,7 @@ ${cabezaHtml(o)}
 </head>
 
 <body data-raiz="${r}"${o.bodyAttrs || ''}>
-${encabezadoHtml(r, o.ruta)}
+${o.cortina ? cortinaHtml(r) + '\n' : ''}${encabezadoHtml(r, o.ruta)}
 
 <main id="principal">
 ${o.contenido}
@@ -298,6 +316,42 @@ export function franjaCta({
     </div>
   </div>
 </section>`;
+}
+
+/**
+ * Capa de media del hero de portada.
+ * Devuelve '' si no hay imagen configurada, así el hero cae al degradado.
+ */
+export function heroMediaHtml() {
+  if (!HERO.imagen) return '';
+
+  const fuentes = HERO.imagenWebp
+    ? `<source srcset="${HERO.imagenWebp}" type="image/webp">`
+    : '';
+
+  const video = HERO.video
+    ? `
+    <video class="hero__video" src="${HERO.video}" muted loop playsinline preload="none"
+           aria-hidden="true" tabindex="-1"></video>`
+    : '';
+
+  return `<div class="hero__media" aria-hidden="true">
+    <picture>
+      ${fuentes}
+      <img class="hero__imagen" src="${HERO.imagen}" alt="" width="1600" height="1000"
+           fetchpriority="high" decoding="async">
+    </picture>${video}
+  </div>
+  <div class="hero__velo" aria-hidden="true"></div>
+  <div class="hero__grano" aria-hidden="true"></div>`;
+}
+
+/** Cortina de carga. El JS la activa; el CSS garantiza que se vaya igual. */
+export function cortinaHtml(raiz) {
+  return `<div class="cortina" id="cortina" aria-hidden="true">
+  <img class="cortina__logo" src="${raiz}img/marca/logo.webp" alt="" width="900" height="672">
+  <div class="cortina__barra"></div>
+</div>`;
 }
 
 /** Encabezado corto para las páginas internas. */

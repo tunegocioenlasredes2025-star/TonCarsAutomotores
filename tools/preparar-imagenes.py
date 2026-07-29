@@ -130,10 +130,58 @@ def og(logo_rgba):
     print("og: 1200x630")
 
 
+def hero():
+    """Fondo del hero de portada.
+
+    Si dejaste tu foto en _originales/hero.(png|jpg|jpeg|webp) la usa.
+    Si no, genera un fondo de marca para que la portada no quede vacía.
+    """
+    origen = next(
+        (ORIG / f"hero{e}" for e in (".png", ".jpg", ".jpeg", ".webp")
+         if (ORIG / f"hero{e}").exists()),
+        None,
+    )
+
+    if origen:
+        im = Image.open(origen).convert("RGB")
+        # Recorte 16:10 centrado, tomando la franja central de la foto.
+        objetivo = 16 / 10
+        actual = im.width / im.height
+        if actual > objetivo:
+            nuevo = int(im.height * objetivo)
+            izq = (im.width - nuevo) // 2
+            im = im.crop((izq, 0, izq + nuevo, im.height))
+        else:
+            nuevo = int(im.width / objetivo)
+            # En fotos verticales conviene quedarse con la parte de arriba:
+            # ahí suele estar el paisaje, y abajo la ruta que tapa el velo.
+            arriba = int((im.height - nuevo) * 0.35)
+            im = im.crop((0, arriba, im.width, arriba + nuevo))
+        im = im.resize((1920, 1200), Image.LANCZOS)
+        print(f"hero: desde {origen.name}")
+    else:
+        w, h = 1920, 1200
+        im = Image.new("RGB", (w, h), (8, 11, 18))
+        d = ImageDraw.Draw(im)
+        for y in range(h):
+            t = y / h
+            d.line([(0, y), (w, y)],
+                   fill=(int(10 + 14 * (1 - t)), int(13 + 6 * t), int(20 + 34 * t)))
+        for x in range(0, w, 74):
+            d.line([(x, 0), (x, h)], fill=(20, 26, 40))
+        for y in range(0, h, 74):
+            d.line([(0, y), (w, y)], fill=(20, 26, 40))
+        print("hero: sin _originales/hero.* — se generó un fondo de marca provisorio")
+
+    im.save(IMG / "marca" / "hero.webp", quality=80, method=6)
+    im.save(IMG / "marca" / "hero.jpg", quality=82, optimize=True, progressive=True)
+
+
 if __name__ == "__main__":
     l = logo()
     favicons(l)
     og(l)
+    hero()
     foto(ORIG / "imagen auto.png", "toyota-yaris-01")
     foto(ORIG / "imagen moto.png", "honda-cb125-01")
     foto(ORIG / "informacion.png", "../marca/local", ancho=1000)
