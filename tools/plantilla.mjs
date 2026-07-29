@@ -5,8 +5,40 @@
    El resultado son archivos .html estáticos y autónomos: el sitio no necesita
    Node para funcionar, sólo para regenerarse cuando cambia el contenido.
    ========================================================================== */
+import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const DIR = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 export const SITIO = 'https://toncars.com.ar';
+
+/* ------------------------------------------------------- Versionado de assets
+   Le pegamos a cada CSS/JS un ?v= con el hash de su contenido.
+
+   Sin esto, al publicar una corrección el navegador (y el CDN) siguen sirviendo
+   el archivo viejo hasta que vence la caché, y los cambios "no aparecen" aunque
+   el deploy haya salido bien. Con el hash, cualquier cambio genera una URL
+   nueva y se ve al instante; si no cambió nada, la URL es la misma y se
+   aprovecha la caché igual.
+   -------------------------------------------------------------------------- */
+const versiones = new Map();
+
+export function v(ruta) {
+  if (!versiones.has(ruta)) {
+    try {
+      const hash = createHash('sha1')
+        .update(readFileSync(join(DIR, ruta)))
+        .digest('hex')
+        .slice(0, 8);
+      versiones.set(ruta, `?v=${hash}`);
+    } catch {
+      versiones.set(ruta, ''); // si el archivo no está todavía, seguimos igual
+    }
+  }
+  return versiones.get(ruta);
+}
 
 /* --------------------------------------------------------------- Hero
    Media de la portada.
@@ -141,7 +173,7 @@ export function cabezaHtml(o) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 ${preloads}
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="${r}css/styles.css">
+<link rel="stylesheet" href="${r}css/styles.css${v('css/styles.css')}">
 <script>document.documentElement.classList.add('js')</script>
 ${schema}`;
 }
@@ -269,7 +301,9 @@ ${ENLACES.map(([r, t]) => `          <a href="${L(raiz, r)}">${t}</a>`).join('\n
  */
 export function paginaHtml(o) {
   const r = o.raiz;
-  const extra = (o.scripts || []).map((s) => `<script src="${r}js/${s}"></script>`).join('\n');
+  const extra = (o.scripts || [])
+    .map((s) => `<script src="${r}js/${s}${v('js/' + s)}"></script>`)
+    .join('\n');
 
   return `<!DOCTYPE html>
 <html lang="es-AR">
@@ -286,8 +320,8 @@ ${o.contenido}
 
 ${pieHtml(r)}
 
-<script src="${r}js/vehiculos.js"></script>
-<script src="${r}js/main.js"></script>
+<script src="${r}js/vehiculos.js${v('js/vehiculos.js')}"></script>
+<script src="${r}js/main.js${v('js/main.js')}"></script>
 ${extra}
 </body>
 </html>

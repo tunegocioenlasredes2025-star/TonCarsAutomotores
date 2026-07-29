@@ -6,14 +6,30 @@
   ],
   "headers": [
     {
-      "source": "/(.*)\\.(webp|jpg|png|svg|ico|woff2)",
+      "comment": "CSS y JS llevan ?v=<hash> en la URL, asi que se pueden cachear para siempre: si cambia el contenido cambia la URL. Aun asi pedimos revalidacion, por si alguien entra al archivo sin el parametro.",
+      "source": "/(.*)\\.(css|js)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     },
     {
-      "source": "/(.*)\\.(css|js)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+      "comment": "Imagenes y video: una semana en cache, y mientras se revalida de fondo se sigue sirviendo la copia vieja. No van como immutable porque los nombres de archivo no llevan hash y se reemplazan (por ejemplo hero.jpg).",
+      "source": "/(.*)\\.(webp|jpg|jpeg|png|svg|ico|mp4|woff2)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "comment": "El HTML nunca se cachea: es lo que trae las URLs versionadas de CSS y JS.",
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
     }
   ]
 }
