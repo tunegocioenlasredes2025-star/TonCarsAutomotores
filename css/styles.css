@@ -561,6 +561,7 @@ p {
   transition: color var(--t), background var(--t);
 }
 
+/* Subrayado de marca siempre visible en todos los enlaces del nav. */
 .nav__enlace::after {
   content: '';
   position: absolute;
@@ -570,23 +571,26 @@ p {
   height: 2px;
   border-radius: 2px;
   background: var(--grad-marca);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--t);
+  transform: scaleX(1);
+  transform-origin: center;
+  transition: opacity var(--t), transform var(--t);
 }
 
 .nav__enlace:hover {
   color: var(--texto);
-  background: rgba(255, 255, 255, 0.045);
+  background: rgba(255, 255, 255, 0.06);
 }
 
-.nav__enlace:hover::after,
-.nav__enlace[aria-current='page']::after {
-  transform: scaleX(1);
-}
-
+/* La página en la que estás queda "pintada" completa: fondo con el degradado
+   de marca, texto blanco y el subrayado se funde con el relleno. */
 .nav__enlace[aria-current='page'] {
-  color: var(--texto);
+  color: #fff;
+  background: var(--grad-marca);
+  box-shadow: var(--brillo-rojo);
+}
+
+.nav__enlace[aria-current='page']::after {
+  opacity: 0;
 }
 
 .encabezado__acciones {
@@ -1937,6 +1941,25 @@ select.campo option {
   font-size: 0.98rem;
   font-weight: 600;
   letter-spacing: -0.02em;
+}
+
+/* "Verificado por mecánico: Sí" y "Financiable: Sí" resaltan en verde con
+   un tilde, para que se lean como un plus de la unidad. */
+.ficha__item--si .ficha__valor {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #34d17a;
+}
+
+.ficha__item--si .ficha__valor::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  flex: none;
+  background: #34d17a;
+  -webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 12.5 5 5L20 6.5'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 12.5 5 5L20 6.5'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 /* Equipamiento */

@@ -222,9 +222,9 @@ const HOME = `
           'Lavado técnico, limpieza de interiores y puesta a punto estética. La unidad que ves publicada es la misma que retirás el día de la entrega.',
         ],
         [
-          ICO.pin,
-          'Salón propio en Maschwitz',
-          'Estamos sobre la colectora del Ramal Escobar. Vení a ver la unidad, probala y llevate la respuesta en el momento, no por teléfono.',
+          ICO.papeles,
+          'Gestoría propia',
+          'Hacemos la transferencia y toda la documentación en casa, con gestoría propia. Trámites más rápidos, sin depender de terceros ni sumar demoras.',
         ],
       ]
         .map(

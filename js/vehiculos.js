@@ -20,6 +20,8 @@
      estado        "usado" | "0km"
      destacado     true para que aparezca en la home
      disponible    false lo saca del catálogo sin borrar el registro
+     verificado    true/false → ficha: "Verificado por mecánico". Sí por defecto.
+     financiable   true/false → ficha: "Financiable". Sí por defecto.
      etiquetas     textos cortos que se muestran sobre la foto
      fotos         rutas relativas a la raíz del sitio. Si está vacío se usa
                    el placeholder de marca según "tipo".
@@ -43,6 +45,10 @@ const VEHICULOS = [
     estado: 'usado',
     destacado: true,
     disponible: true,
+
+    verificado: true,
+
+    financiable: true,
     etiquetas: ['Recién ingresado', 'Detailing hecho'],
     fotos: ['img/vehiculos/toyota-yaris-01.webp'],
     descripcion:
@@ -59,7 +65,6 @@ const VEHICULOS = [
     ],
     fichaExtra: {
       Motor: '1.5 16V',
-      Puertas: '5',
       Color: 'Gris claro',
     },
   },
@@ -77,6 +82,10 @@ const VEHICULOS = [
     estado: 'usado',
     destacado: true,
     disponible: true,
+
+    verificado: true,
+
+    financiable: true,
     etiquetas: ['Papeles al día'],
     fotos: ['img/vehiculos/honda-cb125-01.webp'],
     descripcion:
@@ -108,6 +117,10 @@ const VEHICULOS = [
     estado: 'usado',
     destacado: true,
     disponible: true,
+
+    verificado: true,
+
+    financiable: true,
     etiquetas: ['4x4'],
     fotos: [],
     descripcion:
@@ -124,7 +137,6 @@ const VEHICULOS = [
     fichaExtra: {
       Motor: '2.0 TDI Biturbo',
       Tracción: '4x4',
-      Puertas: '4',
     },
   },
   {
@@ -141,6 +153,10 @@ const VEHICULOS = [
     estado: 'usado',
     destacado: true,
     disponible: true,
+
+    verificado: true,
+
+    financiable: true,
     etiquetas: ['Apto financiación'],
     fotos: [],
     descripcion:
@@ -156,7 +172,6 @@ const VEHICULOS = [
     ],
     fichaExtra: {
       Motor: '1.3 Firefly',
-      Puertas: '4',
       Baúl: '525 litros',
     },
   },
@@ -174,6 +189,10 @@ const VEHICULOS = [
     estado: 'usado',
     destacado: false,
     disponible: true,
+
+    verificado: true,
+
+    financiable: true,
     etiquetas: ['4x4', 'Service oficial'],
     fotos: [],
     descripcion:
@@ -190,7 +209,6 @@ const VEHICULOS = [
     fichaExtra: {
       Motor: '2.8 TDI',
       Tracción: '4x4',
-      Puertas: '4',
     },
   },
   {
@@ -207,6 +225,10 @@ const VEHICULOS = [
     estado: 'usado',
     destacado: false,
     disponible: true,
+
+    verificado: true,
+
+    financiable: true,
     etiquetas: ['Full'],
     fotos: [],
     descripcion:
@@ -222,7 +244,6 @@ const VEHICULOS = [
     ],
     fichaExtra: {
       Motor: '1.6 THP',
-      Puertas: '5',
       Color: 'Gris',
     },
   },
@@ -240,6 +261,10 @@ const VEHICULOS = [
     estado: 'usado',
     destacado: false,
     disponible: true,
+
+    verificado: true,
+
+    financiable: true,
     etiquetas: ['Bajo kilometraje'],
     fotos: [],
     descripcion:
@@ -254,7 +279,6 @@ const VEHICULOS = [
     ],
     fichaExtra: {
       Motor: '1.6 MSI',
-      Puertas: '5',
       Color: 'Blanco',
     },
   },
@@ -272,6 +296,10 @@ const VEHICULOS = [
     estado: 'usado',
     destacado: false,
     disponible: true,
+
+    verificado: true,
+
+    financiable: true,
     etiquetas: ['Utilitario', 'Apta trabajo'],
     fotos: [],
     descripcion:
@@ -287,7 +315,6 @@ const VEHICULOS = [
     fichaExtra: {
       Motor: '1.6 16V',
       Carga: '800 kg',
-      Puertas: '4',
     },
   },
 ];

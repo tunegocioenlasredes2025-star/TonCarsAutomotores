@@ -79,6 +79,10 @@ function galeriaHtml(v) {
 
 /* ----------------------------------------------------------- Ficha técnica */
 function fichaHtml(v) {
+  // "verificado" y "financiable" son sí por defecto: si el dato no está
+  // cargado, se asume que la unidad está revisada y entra en financiación.
+  const siNo = (b) => (b === false ? 'No' : 'Sí');
+
   const base = {
     Marca: v.marca,
     Modelo: v.modelo,
@@ -88,13 +92,19 @@ function fichaHtml(v) {
     Transmisión: v.transmision,
     Tipo: ETIQUETAS_TIPO[v.tipo],
     Estado: v.estado === '0km' ? '0 km' : 'Usado',
+    'Verificado por mecánico': siNo(v.verificado),
+    Financiable: siNo(v.financiable),
     ...(v.fichaExtra || {}),
   };
+
+  const marca = (k) => k === 'Verificado por mecánico' || k === 'Financiable';
 
   return `<dl class="ficha">
         ${Object.entries(base)
           .map(
-            ([k, val]) => `<div class="ficha__item">
+            ([k, val]) => `<div class="ficha__item${
+              marca(k) && val === 'Sí' ? ' ficha__item--si' : ''
+            }">
           <dt class="ficha__clave">${k}</dt>
           <dd class="ficha__valor">${escapar(val)}</dd>
         </div>`
