@@ -69,6 +69,47 @@ export const NEGOCIO = {
   localidad: 'Ingeniero Maschwitz',
   partido: 'Escobar',
   provincia: 'Buenos Aires',
+  googleMaps:
+    'https://www.google.com/maps/place/Ton+Cars+Automotores/@-34.3995347,-58.7360579,17z/data=!4m6!3m5!1s0x95bca1d5462a531b:0xd5c832bc5e41a7b8!8m2!3d-34.3995347!4d-58.7360579',
+};
+
+/* --------------------------------------------------------------- Reseñas
+   Opiniones de Google. La calificación y el total son reales (verificados en
+   el perfil de Google Maps del negocio). Para cargar reseñas nuevas, sumá
+   objetos al array `items` — o borralos. Después: node tools/construir.mjs
+
+   Campos de cada reseña:
+     autor    nombre como figura en Google (ej. "Martín G.")
+     estrellas 1 a 5
+     texto    la reseña, tal cual
+     fecha    texto libre, opcional (ej. "hace 2 meses")
+   -------------------------------------------------------------------- */
+export const RESENAS = {
+  calificacion: '4.8',
+  total: 60, // "más de 60 opiniones"
+  items: [
+    {
+      autor: 'Ricardo Russo',
+      estrellas: 5,
+      fecha: 'Hace 4 meses',
+      texto:
+        'Excelente la atención! Muy transparente todo. Lo recomiendo 100%. Gastón muy profesional.',
+    },
+    {
+      autor: 'Diana Magan',
+      estrellas: 5,
+      fecha: 'Hace 3 meses',
+      texto:
+        'Destaco la calidad de la atención, la predisposición del equipo y la claridad en la información brindada. Cumplieron con todo lo acordado, lo cual genera confianza. Gastón fue muy amable, resolvió todas nuestras dudas desde el primer momento y todo el proceso fue ágil y transparente. El vehículo se vendió en un mes y fue entregado con la transferencia realizada. Excelente! Gracias! 100% recomendables.',
+    },
+    {
+      autor: 'Emanuel Esteban Díaz',
+      estrellas: 5,
+      fecha: 'Hace 3 meses',
+      texto:
+        'Excelente concesionario multimarca!!! Gastón un genio. Resolvió la venta ya de 4 usados y 2 0km para la familia. Todo rápido, impecable y sin ningún problema. La documentación siempre ok. Y siempre una solución cuando no se llega con el contado. Si querés comprar un usado o 0km, andá a verlo a Gastón.',
+    },
+  ],
 };
 
 /* ------------------------------------------------------------------ Iconos */
@@ -93,7 +134,20 @@ export const ICO = {
   cambio: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg>',
   brillo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.1 5.4L19.5 10l-5.4 2.1L12 17.5l-2.1-5.4L4.5 10l5.4-1.6Z"/><path d="M18.5 16.5 19.5 19l2.5 1-2.5 1-1 2.5-1-2.5L15 20l2.5-1Z"/></svg>',
   calc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/></svg>',
+  estrella: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.26L21.6 9.2l-4.9 4.6 1.2 6.7L12 17.3 6.1 20.5l1.2-6.7-4.9-4.6 6.7-.94Z"/></svg>',
+  google:
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.87c2.26-2.09 3.56-5.17 3.56-8.87Z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.08 7.94-2.91l-3.87-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09A12 12 0 0 0 12 24Z"/><path fill="#FBBC05" d="M5.27 14.29a7.2 7.2 0 0 1 0-4.58V6.62H1.29a12 12 0 0 0 0 10.76l3.98-3.09Z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.43-3.43C17.95 1.19 15.24 0 12 0A12 12 0 0 0 1.29 6.62l3.98 3.09C6.22 6.86 8.87 4.75 12 4.75Z"/></svg>',
 };
+
+/** Fila de estrellas para una reseña (1 a 5). */
+function estrellasHtml(n) {
+  const total = 5;
+  let s = '';
+  for (let i = 0; i < total; i++) {
+    s += `<span class="estrella${i < n ? '' : ' estrella--vacia'}">${ICO.estrella}</span>`;
+  }
+  return `<span class="estrellas" role="img" aria-label="${n} de 5 estrellas">${s}</span>`;
+}
 
 /* ---------------------------------------------------------------- Utilidad */
 
@@ -347,6 +401,61 @@ export function franjaCta({
         </a>
         <a class="btn btn--fantasma btn--grande" href="${L(raiz, 'catalogo/')}">Ver vehículos</a>
       </div>
+    </div>
+  </div>
+</section>`;
+}
+
+/**
+ * Sección de reseñas de Google.
+ * @param {object} o
+ * @param {string} o.raiz       "" o "../"
+ * @param {boolean} [o.alt]     fondo alternativo (para intercalar con secciones)
+ */
+export function resenasHtml({ raiz = '', alt = false } = {}) {
+  if (!RESENAS.items.length) return '';
+
+  const inicial = (n) => escapar(n.trim().charAt(0).toUpperCase());
+
+  const tarjetas = RESENAS.items
+    .map(
+      (r) => `
+      <article class="resena revelar">
+        <div class="resena__top">
+          <span class="resena__avatar" aria-hidden="true">${inicial(r.autor)}</span>
+          <div class="resena__quien">
+            <p class="resena__autor">${escapar(r.autor)}</p>
+            ${r.fecha ? `<p class="resena__fecha">${escapar(r.fecha)}</p>` : ''}
+          </div>
+          <span class="resena__google" aria-label="Reseña de Google">${ICO.google}</span>
+        </div>
+        ${estrellasHtml(r.estrellas)}
+        <p class="resena__texto">${escapar(r.texto)}</p>
+      </article>`
+    )
+    .join('');
+
+  return `<section class="seccion${alt ? ' seccion--alt' : ''}" aria-labelledby="t-resenas">
+  <div class="contenedor">
+    <div class="resenas-cabecera revelar">
+      <div class="cabecera-seccion" style="margin-bottom:0">
+        <p class="eyebrow">Opiniones reales</p>
+        <h2 id="t-resenas">Lo que dicen nuestros clientes</h2>
+      </div>
+      <div class="resenas-resumen">
+        <div class="resenas-nota">
+          <span class="resenas-nota__valor">${RESENAS.calificacion}</span>
+          ${estrellasHtml(Math.round(Number(RESENAS.calificacion)))}
+          <span class="resenas-nota__total">Más de ${RESENAS.total} opiniones en Google</span>
+        </div>
+        <a class="btn btn--fantasma btn--chico" href="${NEGOCIO.googleMaps}" target="_blank" rel="noopener">
+          ${ICO.google} Ver todas en Google
+        </a>
+      </div>
+    </div>
+
+    <div class="resenas-grilla">
+      ${tarjetas}
     </div>
   </div>
 </section>`;

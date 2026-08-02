@@ -1434,6 +1434,175 @@ body.sin-scroll {
 }
 
 /* --------------------------------------------------------------------------
+   9 bis. Reseñas de Google
+   -------------------------------------------------------------------------- */
+.resenas-cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.resenas-resumen {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+}
+
+.resenas-nota {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-radius: var(--r);
+  border: 1px solid var(--borde);
+  background: var(--grad-panel);
+}
+
+.resenas-nota__valor {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: #fff;
+}
+
+.resenas-nota__total {
+  font-size: 0.86rem;
+  color: var(--texto-2);
+  max-width: 15ch;
+  line-height: 1.35;
+}
+
+/* Fila de estrellas */
+.estrellas {
+  display: inline-flex;
+  gap: 2px;
+  color: #ffb300;
+}
+
+.estrellas .estrella {
+  display: inline-flex;
+  width: 17px;
+  height: 17px;
+}
+
+.estrella svg {
+  width: 100%;
+  height: 100%;
+}
+
+.estrella--vacia {
+  color: rgba(255, 255, 255, 0.18);
+}
+
+.resenas-resumen .btn .estrella,
+.resenas-nota .estrella {
+  width: 18px;
+  height: 18px;
+}
+
+.resena__google svg,
+.btn .google-ico {
+  width: 18px;
+  height: 18px;
+}
+
+/* Grilla de tarjetas */
+.resenas-grilla {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 700px) {
+  .resenas-grilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .resenas-grilla {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+.resena {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px 22px;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--borde);
+  background: var(--grad-panel);
+  transition: transform var(--t), border-color var(--t), box-shadow var(--t);
+}
+
+.resena:hover {
+  transform: translateY(-4px);
+  border-color: var(--borde-fuerte);
+  box-shadow: var(--sombra);
+}
+
+.resena__top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.resena__avatar {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--grad-marca);
+  color: #fff;
+  font-family: 'Sora', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.resena__quien {
+  flex: 1;
+  min-width: 0;
+}
+
+.resena__autor {
+  font-family: 'Sora', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--texto);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.resena__fecha {
+  font-size: 0.78rem;
+  color: var(--texto-3);
+}
+
+.resena__google {
+  flex: none;
+  opacity: 0.9;
+}
+
+.resena__texto {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--texto-2);
+}
+
+/* --------------------------------------------------------------------------
    10. Filtros y buscador
    -------------------------------------------------------------------------- */
 .panel-filtros {

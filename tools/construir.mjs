@@ -15,11 +15,13 @@ import {
   SITIO,
   NEGOCIO,
   HERO,
+  RESENAS,
   ICO,
   paginaHtml,
   franjaCta,
   heroInterno,
   heroMediaHtml,
+  resenasHtml,
 } from './plantilla.mjs';
 
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -51,6 +53,18 @@ const SCHEMA_NEGOCIO = JSON.stringify(
     priceRange: '$$',
     currenciesAccepted: 'ARS, USD',
     paymentAccepted: 'Efectivo, Transferencia, Financiación, Permuta',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: RESENAS.calificacion,
+      reviewCount: RESENAS.total,
+      bestRating: '5',
+    },
+    review: RESENAS.items.map((r) => ({
+      '@type': 'Review',
+      author: { '@type': 'Person', name: r.autor },
+      reviewRating: { '@type': 'Rating', ratingValue: r.estrellas, bestRating: '5' },
+      reviewBody: r.texto,
+    })),
     address: {
       '@type': 'PostalAddress',
       streetAddress: NEGOCIO.calle,
@@ -298,6 +312,8 @@ const HOME = `
   </div>
 </section>
 
+${resenasHtml({ raiz: '', alt: true })}
+
 ${franjaCta({ raiz: '' })}
 `;
 
@@ -514,6 +530,8 @@ ${heroInterno({
     </ol>
   </div>
 </section>
+
+${resenasHtml({ raiz: '../', alt: false })}
 
 ${franjaCta({ raiz: '../' })}
 `;
