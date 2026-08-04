@@ -76,9 +76,14 @@ const VEHICULOS = [
     verificado: true,
     financiable: true,
     etiquetas: ['Utilitario', 'Consignación'],
-    fotos: [],
+    fotos: [
+      'img/vehiculos/fiat-fiorino-2018-3.webp',
+      'img/vehiculos/fiat-fiorino-2018-1.webp',
+      'img/vehiculos/fiat-fiorino-2018-2.webp',
+      'img/vehiculos/fiat-fiorino-2018-4.webp',
+    ],
     descripcion:
-      'Segunda unidad del Fiat Fiorino 1.4 modelo 2018, con 103.500 km. Utilitario práctico para reparto y oficios, con espacio de carga amplio y mecánica sencilla.',
+      'Segunda unidad del Fiat Fiorino 1.4 modelo 2018, con 103.500 km. Utilitario práctico para reparto y oficios, con espacio de carga amplio y mecánica sencilla. Fotos de referencia del modelo.',
     equipamiento: [],
     fichaExtra: { Motor: '1.4 8V', Color: 'Blanco' },
   },
