@@ -25,6 +25,7 @@ const VARIANTES = {
   sedan: { gx: 0.72, gy: 0.28, angulo: 200 },
   suv: { gx: 0.5, gy: 0.72, angulo: 105 },
   pickup: { gx: 0.2, gy: 0.7, angulo: 300 },
+  utilitario: { gx: 0.62, gy: 0.68, angulo: 150 },
   moto: { gx: 0.8, gy: 0.62, angulo: 60 },
 };
 

@@ -2,85 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://toncars.com.ar/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://toncars.com.ar/catalogo/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://toncars.com.ar/nosotros/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://toncars.com.ar/servicios/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://toncars.com.ar/financiacion/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://toncars.com.ar/contacto/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://toncars.com.ar/vehiculos/honda-cb125f-twister-2021.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://toncars.com.ar/vehiculos/honda-glh-150-2026.html</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://toncars.com.ar/vehiculos/fiat-cronos-drive-2021.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://toncars.com.ar/vehiculos/toyota-yaris-s-2019.html</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://toncars.com.ar/vehiculos/toyota-yaris-xls-cvt-2019.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://toncars.com.ar/vehiculos/volkswagen-virtus-highline-2018.html</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://toncars.com.ar/vehiculos/volkswagen-amarok-highline-4x4-2018.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://toncars.com.ar/vehiculos/volkswagen-amarok-2016.html</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://toncars.com.ar/vehiculos/volkswagen-polo-trendline-2022.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://toncars.com.ar/vehiculos/renault-fluence-luxe-2015.html</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://toncars.com.ar/vehiculos/toyota-hilux-srv-4x4-2020.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://toncars.com.ar/vehiculos/fiat-fiorino-2018.html</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://toncars.com.ar/vehiculos/renault-kangoo-furgon-2020.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://toncars.com.ar/vehiculos/fiat-fiorino-2018-b.html</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://toncars.com.ar/vehiculos/peugeot-3008-allure-2019.html</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://toncars.com.ar/vehiculos/peugeot-308-allure-2018.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toncars.com.ar/vehiculos/peugeot-308-sport-2014.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://toncars.com.ar/vehiculos/toyota-corolla-xli-2014.html</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

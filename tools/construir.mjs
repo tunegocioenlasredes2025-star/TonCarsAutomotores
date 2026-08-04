@@ -346,6 +346,7 @@ ${heroInterno({
         <button class="chip" type="button" data-tipo="sedan" aria-pressed="false">Sedán</button>
         <button class="chip" type="button" data-tipo="suv" aria-pressed="false">SUV</button>
         <button class="chip" type="button" data-tipo="pickup" aria-pressed="false">Pickup</button>
+        <button class="chip" type="button" data-tipo="utilitario" aria-pressed="false">Utilitarios</button>
         <button class="chip" type="button" data-tipo="moto" aria-pressed="false">Motos</button>
       </div>
 

@@ -251,11 +251,16 @@ function paginaVehiculo(v) {
 
         <div class="bloque-detalle">
           <h2 style="font-size:clamp(1.4rem,4vw,1.9rem)">Equipamiento</h2>
-          <ul class="equipamiento">
-            ${(v.equipamiento || [])
+          ${
+            v.equipamiento && v.equipamiento.length
+              ? `<ul class="equipamiento">
+            ${v.equipamiento
               .map((e) => `<li>${ICO.tilde}<span>${escapar(e)}</span></li>`)
               .join('\n            ')}
-          </ul>
+          </ul>`
+              : `<p class="plomo">Escribinos por WhatsApp y te pasamos el equipamiento completo y el estado detallado de esta unidad.</p>
+          <a class="btn btn--wa mt-s" href="${enlaceWhatsapp(v)}" target="_blank" rel="noopener">${ICO.wa} Consultar equipamiento</a>`
+          }
         </div>
       </div>
 
