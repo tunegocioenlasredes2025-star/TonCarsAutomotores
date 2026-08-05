@@ -1194,6 +1194,24 @@ body.sin-scroll {
   color: var(--rojo-claro);
 }
 
+/* Tarjeta que es un enlace (ej. Detailing en "Por qué elegir"). */
+.tarjeta--enlace {
+  cursor: pointer;
+}
+
+.tarjeta--enlace h3 a {
+  color: inherit;
+}
+
+.tarjeta--enlace .enlace-flecha {
+  margin-top: 2px;
+  color: var(--rojo-claro);
+}
+
+.tarjeta--enlace:hover .enlace-flecha {
+  gap: 12px;
+}
+
 /* --------------------------------------------------------------------------
    9. Catálogo — tarjeta de vehículo
    -------------------------------------------------------------------------- */
@@ -2117,10 +2135,19 @@ select.campo option {
    La foto de corrección de pintura (vertical) ocupa la columna izquierda en
    alto; las dos de motor (antes/después) van apiladas a la derecha.
    -------------------------------------------------------------------------- */
+/* En escritorio la galería de detailing pesa más que el texto, para que las
+   fotos se vean grandes. */
+@media (min-width: 1024px) {
+  .detalle--detailing {
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    gap: 40px;
+  }
+}
+
 .detailing-galeria {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 14px;
 }
 
 .detailing-foto {
@@ -2144,7 +2171,7 @@ select.campo option {
 }
 
 .detailing-foto:not(:first-child) img {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 5 / 4;
 }
 
 .detailing-foto figcaption {

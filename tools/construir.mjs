@@ -234,6 +234,7 @@ const HOME = `
           ICO.brillo,
           'Detailing antes de entregar',
           'Lavado técnico, limpieza de interiores y puesta a punto estética. La unidad que ves publicada es la misma que retirás el día de la entrega.',
+          'servicios/index.html#detailing',
         ],
         [
           ICO.papeles,
@@ -242,11 +243,12 @@ const HOME = `
         ],
       ]
         .map(
-          ([ico, titulo, texto], i) => `
-      <article class="tarjeta revelar"${i % 3 ? ` data-retardo="${i % 3}"` : ''}>
+          ([ico, titulo, texto, enlace], i) => `
+      <article class="tarjeta revelar${enlace ? ' tarjeta--enlace' : ''}"${i % 3 ? ` data-retardo="${i % 3}"` : ''}>
         <div class="tarjeta__icono">${ico}</div>
-        <h3>${titulo}</h3>
+        <h3>${enlace ? `<a class="cubrir" href="${enlace}">${titulo}</a>` : titulo}</h3>
         <p>${texto}</p>
+        ${enlace ? `<span class="enlace-flecha" aria-hidden="true">Ver el detailing ${ICO.flecha}</span>` : ''}
       </article>`
         )
         .join('')}
@@ -587,7 +589,7 @@ const FOTOS_DETAILING = [
 const DETAILING = `
 <section class="seccion seccion--alt" id="detailing" aria-labelledby="t-detailing">
   <div class="contenedor">
-    <div class="detalle">
+    <div class="detalle detalle--detailing">
       <div>
         <div class="cabecera-seccion revelar" style="margin-bottom:24px">
           <p class="eyebrow">Servicio de detailing</p>
