@@ -571,13 +571,79 @@ const SERVICIOS_LISTA = [
     'Trabajamos con distintas alternativas de financiación con anticipo, sujetas a evaluación crediticia. Vemos qué plan entra en tu presupuesto.',
     ['Financiación con anticipo', 'Sujeto a evaluación crediticia', 'Distintos plazos disponibles', 'Te decimos el número final antes de firmar'],
   ],
-  [
-    ICO.brillo,
-    'Detailing',
-    'Lavado técnico, tratamiento de pintura y limpieza profunda de interiores. Todas nuestras unidades salen así, y también lo hacemos como servicio aparte.',
-    ['Lavado técnico exterior', 'Pulido y tratamiento de pintura', 'Limpieza profunda de interiores', 'Preparación de la unidad para la venta'],
-  ],
 ];
+
+/* WhatsApp del detailing, que tiene su propio número de contacto. */
+const WA_DETAILING = `https://wa.me/${NEGOCIO.detailingTel}?text=${encodeURIComponent(
+  'Hola Ton Cars, quería consultar por el servicio de detailing.'
+)}`;
+
+const FOTOS_DETAILING = [
+  ['img/detailing/detailing-pintura', 'Corrección de pintura: pulido que borra los micro rayones'],
+  ['img/detailing/detailing-motor-antes', 'Limpieza de motor — antes'],
+  ['img/detailing/detailing-motor-despues', 'Limpieza de motor — después'],
+];
+
+const DETAILING = `
+<section class="seccion seccion--alt" id="detailing" aria-labelledby="t-detailing">
+  <div class="contenedor">
+    <div class="detalle">
+      <div>
+        <div class="cabecera-seccion revelar" style="margin-bottom:24px">
+          <p class="eyebrow">Servicio de detailing</p>
+          <h2 id="t-detailing">Detailing profesional</h2>
+          <p class="plomo">
+            Lavado técnico, corrección y tratamiento de pintura, limpieza de motor
+            y detallado profundo de interiores. Todas nuestras unidades salen así,
+            y también lo hacemos como servicio aparte para tu vehículo.
+          </p>
+        </div>
+
+        <ul class="equipamiento revelar">
+          ${[
+            'Corrección de pintura y pulido',
+            'Tratamiento y sellado de pintura',
+            'Limpieza profunda de motor',
+            'Detallado completo de interiores',
+            'Lavado técnico exterior',
+            'Preparación de la unidad para la venta',
+          ]
+            .map((p) => `<li>${ICO.tilde}<span>${p}</span></li>`)
+            .join('\n          ')}
+        </ul>
+
+        <div class="panel-compra revelar mt-m" style="position:static">
+          <div>
+            <p class="eyebrow">Contacto del detailing</p>
+            <h3 class="mt-s">Pedí tu turno o presupuesto</h3>
+            <p class="tenue" style="font-size:.93rem">
+              El detailing tiene su propia línea directa de WhatsApp.
+            </p>
+          </div>
+          <a class="btn btn--wa btn--bloque btn--grande" href="${WA_DETAILING}" target="_blank" rel="noopener">
+            ${ICO.wa} Escribir al ${NEGOCIO.detailingTelVisible}
+          </a>
+          <a class="btn btn--fantasma btn--bloque" href="tel:+${NEGOCIO.detailingTel}">
+            ${ICO.tel} Llamar al ${NEGOCIO.detailingTelVisible}
+          </a>
+        </div>
+      </div>
+
+      <aside class="detailing-galeria">
+        ${FOTOS_DETAILING.map(
+          ([ruta, alt], i) => `
+        <figure class="detailing-foto revelar"${i ? ` data-retardo="${i}"` : ''}>
+          <picture>
+            <source srcset="../${ruta}.webp" type="image/webp">
+            <img src="../${ruta}.jpg" alt="${alt}" loading="lazy" decoding="async">
+          </picture>
+          <figcaption>${alt}</figcaption>
+        </figure>`
+        ).join('')}
+      </aside>
+    </div>
+  </div>
+</section>`;
 
 const SERVICIOS = `
 ${heroInterno({
@@ -606,7 +672,9 @@ ${heroInterno({
   </div>
 </section>
 
-<section class="seccion seccion--alt" aria-labelledby="t-faq-serv">
+${DETAILING}
+
+<section class="seccion" aria-labelledby="t-faq-serv">
   <div class="contenedor">
     <div class="cabecera-seccion revelar">
       <p class="eyebrow">Dudas frecuentes</p>

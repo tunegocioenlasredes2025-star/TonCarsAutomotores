@@ -63,6 +63,8 @@ export const NEGOCIO = {
   slogan: 'Confianza que te mueve',
   telefono: '5491134253399',
   telefonoVisible: '11 3425-3399',
+  detailingTel: '5491150239776',
+  detailingTelVisible: '11 5023-9776',
   instagram: 'https://www.instagram.com/toncarsdetails',
   instagramUsuario: '@toncarsdetails',
   calle: 'Colectora Este 215, Ramal Escobar',
