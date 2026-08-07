@@ -281,10 +281,10 @@ const iconos = {
           </div>
 
           <dl class="vehiculo__ficha">
-            ${dato(iconos.calendario, v.anio)}
+            ${dato(iconos.calendario, oConfirmar(v.anio))}
             ${dato(iconos.ruta, formatearKm(v.km))}
-            ${dato(iconos.combustible, v.combustible)}
-            ${dato(iconos.caja, v.transmision)}
+            ${dato(iconos.combustible, oConfirmar(v.combustible))}
+            ${dato(iconos.caja, oConfirmar(v.transmision))}
           </dl>
 
           <div class="vehiculo__pie">

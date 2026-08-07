@@ -28,6 +28,7 @@ const {
   fotosVehiculo,
   formatearKm,
   formatearPrecio,
+  oConfirmar,
   enlaceWhatsapp,
 } = require(join(RAIZ, 'js', 'vehiculos.js'));
 
@@ -86,10 +87,10 @@ function fichaHtml(v) {
   const base = {
     Marca: v.marca,
     Modelo: v.modelo,
-    Año: v.anio,
+    Año: oConfirmar(v.anio),
     Kilometraje: formatearKm(v.km),
-    Combustible: v.combustible,
-    Transmisión: v.transmision,
+    Combustible: oConfirmar(v.combustible),
+    Transmisión: oConfirmar(v.transmision),
     Tipo: ETIQUETAS_TIPO[v.tipo],
     Estado: v.estado === '0km' ? '0 km' : 'Usado',
     'Verificado por mecánico': siNo(v.verificado),

@@ -28,6 +28,14 @@ MAPEO = {
     "Toyota YARIS S": "toyota-yaris-s-2019",
     "Volkswagen Amarok 2016": "volkswagen-amarok-2016",
     "Volkswagen VIRTUS HIGHLINE 1": "volkswagen-virtus-highline-2018",
+    # Altas de stock (agosto 2026)
+    "Ford ECOSPORT 1.6 4X2 XLS": "ford-ecosport-xls",
+    "Peugeot 308 ALLURE PACK THP TIPTRONIC": "peugeot-308-allure-2018",
+    "RENAULT KARDIAN EVOLUTION 200 EDC C PACK ADAS (0KM)": "renault-kardian-blanco-0km",
+    "RENAULT KARDIAN EVOLUTION 200 EDC C PACK ADAS (Color GRIS CASSIOPEE - 0KM)": "renault-kardian-gris-cassiopee-0km",
+    "RENAULT KARDIAN EVOLUTION 200 EDC C PACK ADAS (Color GRIS ETOILE - 0KM)": "renault-kardian-gris-etoile-0km",
+    "RENAULT KWID ICONIC 1.0 BITONO (Color GRIS CASSIOPEE - 0KM)": "renault-kwid-bitono-0km",
+    "RENAULT KWID ICONIC 1.0 OUTSIDER (Color BLANCO GLACIAR - 0KM)": "renault-kwid-outsider-0km",
 }
 
 

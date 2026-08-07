@@ -132,7 +132,11 @@ const VEHICULOS = [
     verificado: true,
     financiable: true,
     etiquetas: ['Full', 'Automático'],
-    fotos: [],
+    fotos: [
+      'img/vehiculos/peugeot-308-allure-2018-1.webp',
+      'img/vehiculos/peugeot-308-allure-2018-2.webp',
+      'img/vehiculos/peugeot-308-allure-2018-3.webp',
+    ],
     descripcion:
       'Peugeot 308 Allure Pack THP con caja automática Tiptronic, modelo 2018. Hatchback premium del segmento con motor turbo nafta y equipamiento alto. 111.000 km, unidad en consignación.',
     equipamiento: [],
@@ -306,6 +310,169 @@ const VEHICULOS = [
     equipamiento: [],
     fichaExtra: { Motor: '2.0 TDI Biturbo', Color: 'Gris plata' },
   },
+  {
+    id: 'renault-kardian-blanco-0km',
+    marca: 'Renault',
+    modelo: 'Kardian Evolution 200 EDC Pack ADAS',
+    anio: null,
+    km: 0,
+    combustible: 'Nafta',
+    transmision: 'Automática (EDC)',
+    tipo: 'suv',
+    precio: null,
+    moneda: 'ARS',
+    estado: '0km',
+    destacado: true,
+    disponible: true,
+    verificado: true,
+    financiable: true,
+    etiquetas: ['Blanco'],
+    fotos: [
+      'img/vehiculos/renault-kardian-blanco-0km-1.webp',
+      'img/vehiculos/renault-kardian-blanco-0km-2.webp',
+      'img/vehiculos/renault-kardian-blanco-0km-3.webp',
+    ],
+    descripcion:
+      'Renault Kardian Evolution 200 EDC con Pack ADAS, 0 km. SUV compacto totalmente nuevo. Escribinos por WhatsApp para conocer precio, financiación y disponibilidad.',
+    equipamiento: [],
+    fichaExtra: { Color: 'Blanco' },
+  },
+  {
+    id: 'renault-kardian-gris-cassiopee-0km',
+    marca: 'Renault',
+    modelo: 'Kardian Evolution 200 EDC Pack ADAS',
+    anio: null,
+    km: 0,
+    combustible: 'Nafta',
+    transmision: 'Automática (EDC)',
+    tipo: 'suv',
+    precio: null,
+    moneda: 'ARS',
+    estado: '0km',
+    destacado: true,
+    disponible: true,
+    verificado: true,
+    financiable: true,
+    etiquetas: ['Gris Cassiopée'],
+    fotos: [
+      'img/vehiculos/renault-kardian-gris-cassiopee-0km-1.webp',
+      'img/vehiculos/renault-kardian-gris-cassiopee-0km-2.webp',
+      'img/vehiculos/renault-kardian-gris-cassiopee-0km-3.webp',
+    ],
+    descripcion:
+      'Renault Kardian Evolution 200 EDC con Pack ADAS, 0 km, color Gris Cassiopée. SUV compacto nuevo. Consultá precio y financiación por WhatsApp.',
+    equipamiento: [],
+    fichaExtra: { Color: 'Gris Cassiopée' },
+  },
+  {
+    id: 'renault-kardian-gris-etoile-0km',
+    marca: 'Renault',
+    modelo: 'Kardian Evolution 200 EDC Pack ADAS',
+    anio: null,
+    km: 0,
+    combustible: 'Nafta',
+    transmision: 'Automática (EDC)',
+    tipo: 'suv',
+    precio: null,
+    moneda: 'ARS',
+    estado: '0km',
+    destacado: false,
+    disponible: true,
+    verificado: true,
+    financiable: true,
+    etiquetas: ['Gris Étoile'],
+    fotos: [
+      'img/vehiculos/renault-kardian-gris-etoile-0km-1.webp',
+      'img/vehiculos/renault-kardian-gris-etoile-0km-2.webp',
+      'img/vehiculos/renault-kardian-gris-etoile-0km-3.webp',
+    ],
+    descripcion:
+      'Renault Kardian Evolution 200 EDC con Pack ADAS, 0 km, color Gris Étoile. SUV compacto nuevo. Consultá precio y financiación por WhatsApp.',
+    equipamiento: [],
+    fichaExtra: { Color: 'Gris Étoile' },
+  },
+  {
+    id: 'renault-kwid-outsider-0km',
+    marca: 'Renault',
+    modelo: 'Kwid Iconic 1.0 Outsider',
+    anio: null,
+    km: 0,
+    combustible: 'Nafta',
+    transmision: null,
+    tipo: 'hatchback',
+    precio: null,
+    moneda: 'ARS',
+    estado: '0km',
+    destacado: true,
+    disponible: true,
+    verificado: true,
+    financiable: true,
+    etiquetas: ['Blanco Glaciar'],
+    fotos: [
+      'img/vehiculos/renault-kwid-outsider-0km-1.webp',
+      'img/vehiculos/renault-kwid-outsider-0km-2.webp',
+      'img/vehiculos/renault-kwid-outsider-0km-3.webp',
+      'img/vehiculos/renault-kwid-outsider-0km-4.webp',
+      'img/vehiculos/renault-kwid-outsider-0km-5.webp',
+    ],
+    descripcion:
+      'Renault Kwid Iconic 1.0 Outsider, 0 km, color Blanco Glaciar. Hatchback nuevo, ideal para ciudad. Consultá precio y financiación por WhatsApp.',
+    equipamiento: [],
+    fichaExtra: { Color: 'Blanco Glaciar' },
+  },
+  {
+    id: 'renault-kwid-bitono-0km',
+    marca: 'Renault',
+    modelo: 'Kwid Iconic 1.0 Bitono',
+    anio: null,
+    km: 0,
+    combustible: 'Nafta',
+    transmision: null,
+    tipo: 'hatchback',
+    precio: null,
+    moneda: 'ARS',
+    estado: '0km',
+    destacado: false,
+    disponible: true,
+    verificado: true,
+    financiable: true,
+    etiquetas: ['Gris Cassiopée'],
+    fotos: [
+      'img/vehiculos/renault-kwid-bitono-0km-1.webp',
+    ],
+    descripcion:
+      'Renault Kwid Iconic 1.0 Bitono, 0 km, color Gris Cassiopée. Hatchback nuevo. Consultá precio y financiación por WhatsApp.',
+    equipamiento: [],
+    fichaExtra: { Color: 'Gris Cassiopée' },
+  },
+  {
+    id: 'ford-ecosport-xls',
+    marca: 'Ford',
+    modelo: 'EcoSport 1.6 4x2 XLS',
+    anio: null,
+    km: null,
+    combustible: 'Nafta',
+    transmision: null,
+    tipo: 'suv',
+    precio: null,
+    moneda: 'ARS',
+    estado: 'usado',
+    destacado: false,
+    disponible: true,
+    verificado: true,
+    financiable: true,
+    etiquetas: ['SUV'],
+    fotos: [
+      'img/vehiculos/ford-ecosport-xls-1.webp',
+      'img/vehiculos/ford-ecosport-xls-2.webp',
+      'img/vehiculos/ford-ecosport-xls-3.webp',
+      'img/vehiculos/ford-ecosport-xls-4.webp',
+    ],
+    descripcion:
+      'Ford EcoSport 1.6 4x2 XLS. SUV compacto para ciudad y familia. Escribinos por WhatsApp y te pasamos año, kilometraje, precio y estado detallado de la unidad.',
+    equipamiento: [],
+    fichaExtra: {},
+  },
 ];
 
 /* --------------------------------------------------------------------------
@@ -333,13 +500,17 @@ function vehiculosPublicados(lista = VEHICULOS) {
   return lista
     .filter((v) => v.disponible !== false)
     .slice()
-    .sort((a, b) => Number(b.destacado) - Number(a.destacado) || b.anio - a.anio);
+    .sort((a, b) => Number(b.destacado) - Number(a.destacado) || (b.anio || 0) - (a.anio || 0));
 }
 
 /** "Toyota Yaris 1.5 XLS CVT 2019" */
 function nombreVehiculo(v) {
-  return `${v.marca} ${v.modelo} ${v.anio}`;
+  // El año se omite si todavía no se cargó (unidades nuevas sin ficha completa).
+  return `${v.marca} ${v.modelo}${v.anio ? ' ' + v.anio : ''}`.trim();
 }
+
+/* Placeholder de texto para los datos que todavía no se cargaron. */
+const A_CONFIRMAR = 'A confirmar';
 
 /** Foto principal, o el placeholder de marca según el tipo de carrocería. */
 function fotoPrincipal(v) {
@@ -353,8 +524,14 @@ function fotosVehiculo(v) {
 }
 
 function formatearKm(km) {
+  if (km == null) return A_CONFIRMAR;
   if (km === 0) return '0 km';
   return `${new Intl.NumberFormat('es-AR').format(km)} km`;
+}
+
+/** Devuelve el valor o "A confirmar" si todavía no se cargó. */
+function oConfirmar(valor) {
+  return valor == null || valor === '' ? A_CONFIRMAR : valor;
 }
 
 function formatearPrecio(v) {
@@ -384,6 +561,7 @@ if (typeof module !== 'undefined' && module.exports) {
     fotosVehiculo,
     formatearKm,
     formatearPrecio,
+    oConfirmar,
     enlaceWhatsapp,
   };
 }
