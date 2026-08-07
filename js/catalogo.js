@@ -107,7 +107,9 @@
     relevancia: (a, b) => Number(b.destacado) - Number(a.destacado) || b.anio - a.anio,
     'anio-desc': (a, b) => b.anio - a.anio,
     'anio-asc': (a, b) => a.anio - b.anio,
-    'km-asc': (a, b) => a.km - b.km,
+    // Las unidades sin km cargado (0km recién ingresados, datos a confirmar)
+    // van al final en el orden ascendente, no al principio.
+    'km-asc': (a, b) => (a.km ?? Infinity) - (b.km ?? Infinity),
     'precio-asc': (a, b) => (a.precio ?? Infinity) - (b.precio ?? Infinity),
     'precio-desc': (a, b) => (b.precio ?? -Infinity) - (a.precio ?? -Infinity),
   };

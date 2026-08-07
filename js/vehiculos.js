@@ -32,6 +32,34 @@
 
 const VEHICULOS = [
   {
+    id: 'toyota-etios-xls',
+    marca: 'Toyota',
+    modelo: 'Etios XLS 1.5 5 puertas',
+    anio: null,
+    km: null,
+    combustible: 'Nafta',
+    transmision: null,
+    tipo: 'hatchback',
+    precio: null,
+    moneda: 'ARS',
+    estado: 'usado',
+    destacado: true,
+    disponible: true,
+    verificado: true,
+    financiable: true,
+    etiquetas: ['Recién ingresado'],
+    fotos: [
+      'img/vehiculos/toyota-etios-xls-1.webp',
+      'img/vehiculos/toyota-etios-xls-2.webp',
+      'img/vehiculos/toyota-etios-xls-3.webp',
+      'img/vehiculos/toyota-etios-xls-4.webp',
+    ],
+    descripcion:
+      'Toyota Etios XLS 1.5 5 puertas, color rojo. Hatchback económico y confiable, con la respaldo de Toyota. Escribinos por WhatsApp y te pasamos año, kilometraje, precio y estado detallado de la unidad.',
+    equipamiento: [],
+    fichaExtra: { Color: 'Rojo' },
+  },
+  {
     id: 'fiat-fiorino-2018',
     marca: 'Fiat',
     modelo: 'Nuevo Fiorino 1.4 8V',
