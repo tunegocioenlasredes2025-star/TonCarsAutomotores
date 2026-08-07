@@ -260,7 +260,7 @@ export function encabezadoHtml(raiz, activa) {
 <header class="encabezado">
   <div class="encabezado__interno">
     <a class="marca" href="${L(raiz)}" aria-label="${NEGOCIO.nombre}, inicio">
-      <img src="${raiz}img/marca/logo-nav.webp" alt="${NEGOCIO.nombre}" width="360" height="269">
+      <img src="${raiz}img/marca/logo-nav.webp" alt="${NEGOCIO.nombre}" width="600" height="226">
     </a>
 
     <nav class="nav" aria-label="Navegación principal">
@@ -293,7 +293,7 @@ export function pieHtml(raiz) {
   <div class="contenedor">
     <div class="pie__grilla">
       <div class="pie__marca">
-        <img src="${raiz}img/marca/logo-nav.webp" alt="${NEGOCIO.nombre}" width="360" height="269" loading="lazy">
+        <img src="${raiz}img/marca/logo-nav.webp" alt="${NEGOCIO.nombre}" width="600" height="226" loading="lazy">
         <p>
           Agencia multimarca atendida por sus dueños en ${NEGOCIO.localidad}.
           Compra, venta, permuta y consignación de autos y motos.
@@ -494,7 +494,7 @@ export function heroMediaHtml() {
 /** Cortina de carga. El JS la activa; el CSS garantiza que se vaya igual. */
 export function cortinaHtml(raiz) {
   return `<div class="cortina" id="cortina" aria-hidden="true">
-  <img class="cortina__logo" src="${raiz}img/marca/logo.webp" alt="" width="900" height="672">
+  <img class="cortina__logo" src="${raiz}img/marca/logo.webp" alt="" width="1100" height="415">
   <div class="cortina__barra"></div>
 </div>`;
 }

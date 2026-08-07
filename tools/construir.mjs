@@ -134,7 +134,7 @@ const HOME = `
   <div class="contenedor">
     <div class="hero__interno">
       <img class="hero__logo" src="img/marca/logo.webp" alt="${NEGOCIO.nombre}"
-           width="900" height="672" fetchpriority="high" decoding="async">
+           width="1100" height="415" fetchpriority="high" decoding="async">
 
       <h1>Tu próximo vehículo,<br><span class="destacado">con información clara.</span></h1>
 

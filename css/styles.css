@@ -528,14 +528,16 @@ p {
 }
 
 .marca img {
-  height: 38px;
+  /* El logo es horizontal y ancho: le damos algo más de alto que uno
+     cuadrado para que el texto se lea bien. */
+  height: 42px;
   width: auto;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
 }
 
 @media (min-width: 768px) {
   .marca img {
-    height: 46px;
+    height: 52px;
   }
 }
 
