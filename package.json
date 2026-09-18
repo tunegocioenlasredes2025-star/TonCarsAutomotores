@@ -1,0 +1,13 @@
+{
+  "name": "toncars-automotores",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio de Ton Cars Automotores. Sitio estático generado con Node; el panel /admin edita data/vehiculos.json y Vercel regenera las páginas en cada deploy.",
+  "scripts": {
+    "datos": "node tools/datos-a-js.mjs",
+    "build": "node tools/datos-a-js.mjs && node tools/construir.mjs && node tools/generar-vehiculos.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

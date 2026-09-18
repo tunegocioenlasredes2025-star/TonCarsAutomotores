@@ -1,6 +1,9 @@
 # Archivos crudos que entregó el cliente (no hacen falta en el sitio publicado)
 _originales/
 
+# Dependencias
+node_modules/
+
 # Sistema
 Thumbs.db
 desktop.ini

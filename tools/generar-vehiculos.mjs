@@ -366,6 +366,8 @@ writeFileSync(
 User-agent: *
 Allow: /
 
+Disallow: /admin/
+Disallow: /api/
 Disallow: /tools/
 Disallow: /_originales/
 
