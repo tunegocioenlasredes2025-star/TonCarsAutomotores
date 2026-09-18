@@ -34,7 +34,9 @@ const RUTA_FOTO_NUEVA = /^img\/vehiculos\/[a-z0-9-]+\.webp$/;
 const RUTA_FOTO = /^img\/vehiculos\/[a-z0-9._-]+\.(webp|jpe?g|png)$/i;
 
 const config = () => {
-  const token = process.env.GITHUB_TOKEN;
+  // Aceptamos las dos grafías: en Vercel la variable se cargó como github_token (minúsculas)
+  // y en Node/Linux los nombres distinguen mayúsculas.
+  const token = process.env.GITHUB_TOKEN || process.env.github_token;
   const pass = normalizarClave(process.env.PANEL_PASSWORD);
   const hash = ACCESO && ACCESO.hash;
   if (!token || (!pass && !hash)) return null;
