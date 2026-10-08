@@ -311,39 +311,6 @@
     }
   },
   {
-    "id": "toyota-yaris-s-2019",
-    "marca": "Toyota",
-    "modelo": "Yaris S 1.5 6MT",
-    "anio": 2019,
-    "km": 116591,
-    "combustible": "Nafta",
-    "transmision": "Manual",
-    "tipo": "hatchback",
-    "precio": 23200000,
-    "moneda": "ARS",
-    "estado": "usado",
-    "destacado": true,
-    "disponible": true,
-    "verificado": true,
-    "financiable": true,
-    "etiquetas": [
-      "Bajo consumo",
-      "Toyota"
-    ],
-    "fotos": [
-      "img/vehiculos/toyota-yaris-s-2019-1.webp",
-      "img/vehiculos/toyota-yaris-s-2019-2.webp",
-      "img/vehiculos/toyota-yaris-s-2019-3.webp",
-      "img/vehiculos/toyota-yaris-s-2019-4.webp"
-    ],
-    "descripcion": "Toyota Yaris S 1.5 manual, modelo 2019. Hatchback moderno, económico y con la garantía de calidad Toyota. 116.591 km, ideal para uso diario en ciudad.",
-    "equipamiento": [],
-    "fichaExtra": {
-      "Motor": "1.5 16V",
-      "Color": "Gris plata"
-    }
-  },
-  {
     "id": "volkswagen-amarok-2016",
     "marca": "Volkswagen",
     "modelo": "Amarok 2.0 TDI 180 CV 4x2",
