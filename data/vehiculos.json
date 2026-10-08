@@ -62,12 +62,12 @@
     "id": "toyota-etios-xls",
     "marca": "Toyota",
     "modelo": "Etios XLS 1.5 5 puertas",
-    "anio": null,
-    "km": null,
+    "anio": 2019,
+    "km": 152000,
     "combustible": "Nafta",
-    "transmision": null,
+    "transmision": "Manual",
     "tipo": "hatchback",
-    "precio": null,
+    "precio": 19500000,
     "moneda": "ARS",
     "estado": "usado",
     "destacado": true,
@@ -75,16 +75,42 @@
     "verificado": true,
     "financiable": true,
     "etiquetas": [
-      "Recién ingresado"
+      "UNICO DUEÑO/ FINANCIA 100%"
     ],
     "fotos": [
       "img/vehiculos/toyota-etios-xls-1.webp",
       "img/vehiculos/toyota-etios-xls-2.webp",
       "img/vehiculos/toyota-etios-xls-3.webp",
-      "img/vehiculos/toyota-etios-xls-4.webp"
+      "img/vehiculos/toyota-etios-xls-4.webp",
+      "img/vehiculos/toyota-etios-xls-1-5-5-puertas-fw734a.webp",
+      "img/vehiculos/toyota-etios-xls-1-5-5-puertas-zfdntj.webp"
     ],
-    "descripcion": "Toyota Etios XLS 1.5 5 puertas, color rojo. Hatchback económico y confiable, con la respaldo de Toyota. Escribinos por WhatsApp y te pasamos año, kilometraje, precio y estado detallado de la unidad.",
-    "equipamiento": [],
+    "descripcion": "Confiabilidad Toyota, bajo consumo y excelente equipamiento. ✔️ Motor 1.5 nafta ✔️ Caja manual de 6 velocidades ✔️ Versión XLS, la más equipada ✔️ 5 puertas ✔️ Pantalla multimedia ✔️ Cámara de retroceso ✔️ Sensores de estacionamiento ✔️ Control de velocidad crucero ✔️ Comandos al volante ✔️ Llantas de aleación ✔️ Faros antiniebla ✔️ Espejos y cristales eléctricos ✔️ Doble airbag + ABS ✔️ Excelente espacio interior y baúl Un auto ideal para uso diario, familiar y ciudad, con la reconocida confiabilidad y economía de mantenimiento de Toyota.",
+    "equipamiento": [
+      "Motor 1.5 naftero 16V, 107 CV aprox.",
+      "* Caja manual de 6 velocidades.",
+      "* Dirección eléctrica.",
+      "* ABS + EBD + BA.",
+      "* Control de estabilidad (VSC).",
+      "* Control de tracción (TRC).",
+      "* Asistente de arranque en pendiente.",
+      "* Doble airbag frontal.",
+      "* Cámara de retroceso.",
+      "* Pantalla multimedia táctil.",
+      "* Bluetooth / USB.",
+      "* Comandos de audio al volante.",
+      "* Control de velocidad crucero.",
+      "* Levantavidrios eléctricos.",
+      "* Cierre centralizado con comando a distancia.",
+      "* Espejos exteriores eléctricos.",
+      "* Llantas de aleación.",
+      "* Faros antiniebla delanteros.",
+      "* Volante multifunción.",
+      "* Aire acondicionado.",
+      "* Butaca del conductor regulable en altura.",
+      "* Computadora de a bordo.",
+      "* Apertura interna de baúl y tapa de combustible."
+    ],
     "fichaExtra": {
       "Color": "Rojo"
     }
