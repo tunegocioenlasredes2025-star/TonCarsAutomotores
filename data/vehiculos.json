@@ -1,5 +1,51 @@
 [
   {
+    "id": "honda-fit-e-xl-automatico",
+    "marca": "HONDA",
+    "modelo": "FIT E-XL AUTOMATICO",
+    "anio": 2011,
+    "km": 249000,
+    "combustible": "Nafta",
+    "transmision": "Automática",
+    "tipo": "hatchback",
+    "precio": 14000000,
+    "moneda": "ARS",
+    "estado": "usado",
+    "destacado": false,
+    "disponible": true,
+    "verificado": true,
+    "financiable": true,
+    "etiquetas": [
+      "AUTOMATICO/ FINANCIA 100%"
+    ],
+    "fotos": [
+      "img/vehiculos/auto-opgxgc.webp",
+      "img/vehiculos/auto-ou252y.webp",
+      "img/vehiculos/auto-0irj20.webp",
+      "img/vehiculos/auto-9rr2yj.webp",
+      "img/vehiculos/auto-ks0k4x.webp",
+      "img/vehiculos/auto-19zpvz.webp",
+      "img/vehiculos/auto-xh31ks.webp"
+    ],
+    "descripcion": "Honda Fit EXL 2011 – Automático Una excelente opción para quienes buscan un vehículo confiable, cómodo, económico y versátil. El Fit se destaca por su excelente aprovechamiento del espacio interior, posición de manejo elevada y la reconocida confiabilidad de Honda.",
+    "equipamiento": [
+      "🔹 Versión EXL",
+      "🔹 Caja automática",
+      "🔹 Motor 1.5 nafta",
+      "🔹 Interior amplio y confortable",
+      "🔹 Excelente espacio y modularidad",
+      "🔹 Comandos al volante",
+      "🔹 Climatizador",
+      "🔹 Levanta cristales eléctricos",
+      "🔹 Cierre centralizado",
+      "🔹 Espejos eléctricos",
+      "🔹 Llantas de aleación",
+      "🔹 Airbags",
+      "🔹 ABS"
+    ],
+    "fichaExtra": {}
+  },
+  {
     "id": "fiat-toro-volcano-2-0-4x4-at9",
     "marca": "FIAT",
     "modelo": "TORO VOLCANO 2.0 4X4 AT9",
