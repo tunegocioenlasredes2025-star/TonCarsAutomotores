@@ -11,7 +11,7 @@
     "precio": 14000000,
     "moneda": "ARS",
     "estado": "usado",
-    "destacado": false,
+    "destacado": true,
     "disponible": true,
     "verificado": true,
     "financiable": true,
@@ -162,38 +162,6 @@
     }
   },
   {
-    "id": "fiat-fiorino-2018-b",
-    "marca": "Fiat",
-    "modelo": "Nuevo Fiorino 1.4 8V",
-    "anio": 2018,
-    "km": 103500,
-    "combustible": "Nafta",
-    "transmision": "Manual",
-    "tipo": "utilitario",
-    "precio": 16500000,
-    "moneda": "ARS",
-    "estado": "usado",
-    "destacado": false,
-    "disponible": true,
-    "verificado": true,
-    "financiable": true,
-    "etiquetas": [
-      "VENDIDO"
-    ],
-    "fotos": [
-      "img/vehiculos/fiat-fiorino-2018-3.webp",
-      "img/vehiculos/fiat-fiorino-2018-1.webp",
-      "img/vehiculos/fiat-fiorino-2018-2.webp",
-      "img/vehiculos/fiat-fiorino-2018-4.webp"
-    ],
-    "descripcion": "Segunda unidad del Fiat Fiorino 1.4 modelo 2018, con 103.500 km. Utilitario práctico para reparto y oficios, con espacio de carga amplio y mecánica sencilla. Fotos de referencia del modelo.",
-    "equipamiento": [],
-    "fichaExtra": {
-      "Motor": "1.4 8V",
-      "Color": "Blanco"
-    }
-  },
-  {
     "id": "honda-glh-150-2026",
     "marca": "Honda",
     "modelo": "GLH 150",
@@ -224,6 +192,39 @@
     "fichaExtra": {
       "Cilindrada": "150 cc",
       "Color": "Negra y roja"
+    }
+  },
+  {
+    "id": "peugeot-308-sport-2014",
+    "marca": "Peugeot",
+    "modelo": "308 Sport THP",
+    "anio": 2014,
+    "km": 126433,
+    "combustible": "Nafta",
+    "transmision": "Automática",
+    "tipo": "hatchback",
+    "precio": 14200000,
+    "moneda": "ARS",
+    "estado": "usado",
+    "destacado": true,
+    "disponible": true,
+    "verificado": true,
+    "financiable": true,
+    "etiquetas": [
+      "THP Turbo",
+      "Automático"
+    ],
+    "fotos": [
+      "img/vehiculos/peugeot-308-sport-2014-1.webp",
+      "img/vehiculos/peugeot-308-sport-2014-2.webp",
+      "img/vehiculos/peugeot-308-sport-2014-3.webp",
+      "img/vehiculos/peugeot-308-sport-2014-4.webp"
+    ],
+    "descripcion": "Peugeot 308 Sport THP automático, modelo 2014. Motor turbo nafta, muy buen andar y una terminación deportiva. 126.433 km, unidad revisada y en consignación.",
+    "equipamiento": [],
+    "fichaExtra": {
+      "Motor": "1.6 THP Turbo",
+      "Color": "Gris"
     }
   },
   {
@@ -259,39 +260,6 @@
     }
   },
   {
-    "id": "peugeot-308-sport-2014",
-    "marca": "Peugeot",
-    "modelo": "308 Sport THP",
-    "anio": 2014,
-    "km": 126433,
-    "combustible": "Nafta",
-    "transmision": "Automática",
-    "tipo": "hatchback",
-    "precio": 14200000,
-    "moneda": "ARS",
-    "estado": "usado",
-    "destacado": false,
-    "disponible": true,
-    "verificado": true,
-    "financiable": true,
-    "etiquetas": [
-      "THP Turbo",
-      "Automático"
-    ],
-    "fotos": [
-      "img/vehiculos/peugeot-308-sport-2014-1.webp",
-      "img/vehiculos/peugeot-308-sport-2014-2.webp",
-      "img/vehiculos/peugeot-308-sport-2014-3.webp",
-      "img/vehiculos/peugeot-308-sport-2014-4.webp"
-    ],
-    "descripcion": "Peugeot 308 Sport THP automático, modelo 2014. Motor turbo nafta, muy buen andar y una terminación deportiva. 126.433 km, unidad revisada y en consignación.",
-    "equipamiento": [],
-    "fichaExtra": {
-      "Motor": "1.6 THP Turbo",
-      "Color": "Gris"
-    }
-  },
-  {
     "id": "renault-fluence-luxe-2015",
     "marca": "Renault",
     "modelo": "Fluence PH2 2.0 Luxe Pack Cuero",
@@ -303,7 +271,7 @@
     "precio": 16500000,
     "moneda": "ARS",
     "estado": "usado",
-    "destacado": true,
+    "destacado": false,
     "disponible": true,
     "verificado": true,
     "financiable": true,
@@ -311,80 +279,16 @@
       "VENDIDO"
     ],
     "fotos": [
+      "img/vehiculos/renault-fluence-luxe-2015-4.webp",
       "img/vehiculos/renault-fluence-luxe-2015-1.webp",
       "img/vehiculos/renault-fluence-luxe-2015-2.webp",
-      "img/vehiculos/renault-fluence-luxe-2015-3.webp",
-      "img/vehiculos/renault-fluence-luxe-2015-4.webp"
+      "img/vehiculos/renault-fluence-luxe-2015-3.webp"
     ],
     "descripcion": "Renault Fluence 2.0 Luxe Pack Cuero, modelo 2015. Sedán espacioso y confortable, con tapizado de cuero y uno de los equipamientos más completos de su gama. 81.200 km.",
     "equipamiento": [],
     "fichaExtra": {
       "Motor": "2.0 16V",
       "Color": "Gris"
-    }
-  },
-  {
-    "id": "toyota-corolla-xli-2014",
-    "marca": "Toyota",
-    "modelo": "Corolla XLI",
-    "anio": 2014,
-    "km": 198450,
-    "combustible": "Nafta",
-    "transmision": "Automática",
-    "tipo": "sedan",
-    "precio": 17800000,
-    "moneda": "ARS",
-    "estado": "usado",
-    "destacado": false,
-    "disponible": true,
-    "verificado": true,
-    "financiable": true,
-    "etiquetas": [
-      "Automático",
-      "Toyota"
-    ],
-    "fotos": [
-      "img/vehiculos/toyota-corolla-xli-2014-1.webp",
-      "img/vehiculos/toyota-corolla-xli-2014-2.webp",
-      "img/vehiculos/toyota-corolla-xli-2014-3.webp",
-      "img/vehiculos/toyota-corolla-xli-2014-4.webp"
-    ],
-    "descripcion": "Toyota Corolla XLI automático, modelo 2014. El sedán más confiable del segmento, con la reconocida durabilidad Toyota. 198.450 km, con historial de uso y en consignación.",
-    "equipamiento": [],
-    "fichaExtra": {
-      "Motor": "1.8 16V",
-      "Color": "Gris"
-    }
-  },
-  {
-    "id": "volkswagen-amarok-2016",
-    "marca": "Volkswagen",
-    "modelo": "Amarok 2.0 TDI 180 CV 4x2",
-    "anio": 2016,
-    "km": 209316,
-    "combustible": "Diésel",
-    "transmision": "Automática",
-    "tipo": "pickup",
-    "precio": 25000000,
-    "moneda": "ARS",
-    "estado": "usado",
-    "destacado": true,
-    "disponible": true,
-    "verificado": true,
-    "financiable": true,
-    "etiquetas": [
-      "VENDIDO"
-    ],
-    "fotos": [
-      "img/vehiculos/volkswagen-amarok-2016-2.webp",
-      "img/vehiculos/volkswagen-amarok-2016-3.webp",
-      "img/vehiculos/volkswagen-amarok-2016-4.webp"
-    ],
-    "descripcion": "Volkswagen Amarok 2.0 TDI 180 CV 4x2 automática, modelo 2016. Pickup de trabajo y familia con motor diésel biturbo y gran capacidad de carga. 209.316 km.",
-    "equipamiento": [],
-    "fichaExtra": {
-      "Motor": "2.0 TDI Biturbo",
-      "Color": "Gris plata"
     }
   },
   {
@@ -399,7 +303,7 @@
     "precio": null,
     "moneda": "ARS",
     "estado": "0km",
-    "destacado": true,
+    "destacado": false,
     "disponible": true,
     "verificado": true,
     "financiable": true,
@@ -429,7 +333,7 @@
     "precio": null,
     "moneda": "ARS",
     "estado": "0km",
-    "destacado": true,
+    "destacado": false,
     "disponible": true,
     "verificado": true,
     "financiable": true,
@@ -489,7 +393,7 @@
     "precio": null,
     "moneda": "ARS",
     "estado": "0km",
-    "destacado": true,
+    "destacado": false,
     "disponible": true,
     "verificado": true,
     "financiable": true,
@@ -535,6 +439,102 @@
     "equipamiento": [],
     "fichaExtra": {
       "Color": "Gris Cassiopée"
+    }
+  },
+  {
+    "id": "toyota-corolla-xli-2014",
+    "marca": "Toyota",
+    "modelo": "Corolla XLI",
+    "anio": 2014,
+    "km": 198450,
+    "combustible": "Nafta",
+    "transmision": "Automática",
+    "tipo": "sedan",
+    "precio": 17800000,
+    "moneda": "ARS",
+    "estado": "usado",
+    "destacado": false,
+    "disponible": true,
+    "verificado": true,
+    "financiable": true,
+    "etiquetas": [
+      "Automático",
+      "Toyota"
+    ],
+    "fotos": [
+      "img/vehiculos/toyota-corolla-xli-2014-3.webp",
+      "img/vehiculos/toyota-corolla-xli-2014-1.webp",
+      "img/vehiculos/toyota-corolla-xli-2014-2.webp",
+      "img/vehiculos/toyota-corolla-xli-2014-4.webp"
+    ],
+    "descripcion": "Toyota Corolla XLI automático, modelo 2014. El sedán más confiable del segmento, con la reconocida durabilidad Toyota. 198.450 km, con historial de uso y en consignación.",
+    "equipamiento": [],
+    "fichaExtra": {
+      "Motor": "1.8 16V",
+      "Color": "Gris"
+    }
+  },
+  {
+    "id": "fiat-fiorino-2018-b",
+    "marca": "Fiat",
+    "modelo": "Nuevo Fiorino 1.4 8V",
+    "anio": 2018,
+    "km": 103500,
+    "combustible": "Nafta",
+    "transmision": "Manual",
+    "tipo": "utilitario",
+    "precio": 16500000,
+    "moneda": "ARS",
+    "estado": "usado",
+    "destacado": false,
+    "disponible": true,
+    "verificado": true,
+    "financiable": true,
+    "etiquetas": [
+      "VENDIDO"
+    ],
+    "fotos": [
+      "img/vehiculos/fiat-fiorino-2018-3.webp",
+      "img/vehiculos/fiat-fiorino-2018-1.webp",
+      "img/vehiculos/fiat-fiorino-2018-2.webp",
+      "img/vehiculos/fiat-fiorino-2018-4.webp"
+    ],
+    "descripcion": "Segunda unidad del Fiat Fiorino 1.4 modelo 2018, con 103.500 km. Utilitario práctico para reparto y oficios, con espacio de carga amplio y mecánica sencilla. Fotos de referencia del modelo.",
+    "equipamiento": [],
+    "fichaExtra": {
+      "Motor": "1.4 8V",
+      "Color": "Blanco"
+    }
+  },
+  {
+    "id": "volkswagen-amarok-2016",
+    "marca": "Volkswagen",
+    "modelo": "Amarok 2.0 TDI 180 CV 4x2",
+    "anio": 2016,
+    "km": 209316,
+    "combustible": "Diésel",
+    "transmision": "Automática",
+    "tipo": "pickup",
+    "precio": 25000000,
+    "moneda": "ARS",
+    "estado": "usado",
+    "destacado": false,
+    "disponible": true,
+    "verificado": true,
+    "financiable": true,
+    "etiquetas": [
+      "VENDIDO"
+    ],
+    "fotos": [
+      "img/vehiculos/volkswagen-amarok-2016-2.webp",
+      "img/vehiculos/volkswagen-amarok-2016-3.webp",
+      "img/vehiculos/volkswagen-amarok-2016-4.webp"
+    ],
+    "descripcion": "Volkswagen Amarok 2.0 TDI 180 CV 4x2 automática, modelo 2016. Pickup de trabajo y familia con motor diésel biturbo y gran capacidad de carga. 209.316 km.",
+    "equipamiento": [],
+    "fichaExtra": {
+      "Motor": "2.0 TDI Biturbo",
+      "Color": "Gris plata"
     }
   },
   {
