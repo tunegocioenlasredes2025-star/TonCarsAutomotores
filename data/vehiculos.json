@@ -116,38 +116,6 @@
     }
   },
   {
-    "id": "fiat-fiorino-2018",
-    "marca": "Fiat",
-    "modelo": "Nuevo Fiorino 1.4 8V",
-    "anio": 2018,
-    "km": 110000,
-    "combustible": "Nafta",
-    "transmision": "Manual",
-    "tipo": "utilitario",
-    "precio": 16500000,
-    "moneda": "ARS",
-    "estado": "usado",
-    "destacado": false,
-    "disponible": true,
-    "verificado": true,
-    "financiable": true,
-    "etiquetas": [
-      "VENDIDO"
-    ],
-    "fotos": [
-      "img/vehiculos/fiat-fiorino-2018-3.webp",
-      "img/vehiculos/fiat-fiorino-2018-1.webp",
-      "img/vehiculos/fiat-fiorino-2018-2.webp",
-      "img/vehiculos/fiat-fiorino-2018-4.webp"
-    ],
-    "descripcion": "Fiat Fiorino 1.4 modelo 2018, utilitario liviano ideal para reparto y trabajo diario. Gran espacio de carga, bajo consumo y costo de mantenimiento accesible. Unidad en consignación, con 110.000 km.",
-    "equipamiento": [],
-    "fichaExtra": {
-      "Motor": "1.4 8V",
-      "Color": "Blanco"
-    }
-  },
-  {
     "id": "fiat-fiorino-2018-b",
     "marca": "Fiat",
     "modelo": "Nuevo Fiorino 1.4 8V",
