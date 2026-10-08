@@ -292,39 +292,6 @@
     }
   },
   {
-    "id": "volkswagen-virtus-highline-2018",
-    "marca": "Volkswagen",
-    "modelo": "Virtus Highline 1.6",
-    "anio": 2018,
-    "km": 110873,
-    "combustible": "Nafta",
-    "transmision": "Automática",
-    "tipo": "sedan",
-    "precio": 21500000,
-    "moneda": "ARS",
-    "estado": "usado",
-    "destacado": true,
-    "disponible": true,
-    "verificado": true,
-    "financiable": true,
-    "etiquetas": [
-      "Highline",
-      "Full"
-    ],
-    "fotos": [
-      "img/vehiculos/volkswagen-virtus-highline-2018-1.webp",
-      "img/vehiculos/volkswagen-virtus-highline-2018-2.webp",
-      "img/vehiculos/volkswagen-virtus-highline-2018-3.webp",
-      "img/vehiculos/volkswagen-virtus-highline-2018-4.webp"
-    ],
-    "descripcion": "Volkswagen Virtus Highline 1.6 automático, modelo 2018. Sedán full del segmento, uno de los más equipados y seguros de su categoría. 110.873 km, color negro.",
-    "equipamiento": [],
-    "fichaExtra": {
-      "Motor": "1.6 MSI",
-      "Color": "Negro"
-    }
-  },
-  {
     "id": "volkswagen-amarok-2016",
     "marca": "Volkswagen",
     "modelo": "Amarok 2.0 TDI 180 CV 4x2",
@@ -524,7 +491,7 @@
     "verificado": true,
     "financiable": true,
     "etiquetas": [
-      "SUV"
+      "VENDIDO"
     ],
     "fotos": [
       "img/vehiculos/ford-ecosport-xls-1.webp",
