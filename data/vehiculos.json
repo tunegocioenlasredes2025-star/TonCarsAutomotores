@@ -1,5 +1,45 @@
 [
   {
+    "id": "chevrolet-captiva-lt-2-4-mt",
+    "marca": "CHEVROLET",
+    "modelo": "CAPTIVA LT 2.4 MT",
+    "anio": 2017,
+    "km": 142000,
+    "combustible": "Nafta",
+    "transmision": "Manual",
+    "tipo": "suv",
+    "precio": 22500000,
+    "moneda": "ARS",
+    "estado": "usado",
+    "destacado": true,
+    "disponible": true,
+    "verificado": true,
+    "financiable": true,
+    "etiquetas": [
+      "7 ASIENTOS / FINANCIA 100%"
+    ],
+    "fotos": [
+      "img/vehiculos/auto-e9s8yk.webp",
+      "img/vehiculos/auto-jhuq3h.webp",
+      "img/vehiculos/auto-iq18vj.webp",
+      "img/vehiculos/auto-xdtjq2.webp",
+      "img/vehiculos/auto-solmxx.webp",
+      "img/vehiculos/auto-xosqi0.webp",
+      "img/vehiculos/auto-jj6s2z.webp",
+      "img/vehiculos/auto-nytqd7.webp"
+    ],
+    "descripcion": "CHEVROLET CAPTIVA LT 2017 MANUAL ¡Espacio, confort y comodidad para toda la familia!",
+    "equipamiento": [
+      "Motor potente y confiable",
+      "✅ Caja manual",
+      "✅ Amplio interior y excelente habitabilidad",
+      "✅ Gran capacidad de baúl",
+      "✅ Posición de manejo elevada",
+      "✅ Ideal para viajar en familia con total comodidad"
+    ],
+    "fichaExtra": {}
+  },
+  {
     "id": "ford-ecosport-titanium-1-6l-mt-n",
     "marca": "FORD",
     "modelo": "ECOSPORT TITANIUM 1.6L MT N",
