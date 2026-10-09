@@ -1,5 +1,49 @@
 [
   {
+    "id": "fiat-palio-1-6-16v-essence-at",
+    "marca": "FIAT",
+    "modelo": "PALIO 1.6 16V ESSENCE AT",
+    "anio": 2017,
+    "km": 82905,
+    "combustible": "Nafta",
+    "transmision": "Automática",
+    "tipo": "hatchback",
+    "precio": 15000000,
+    "moneda": "ARS",
+    "estado": "usado",
+    "destacado": true,
+    "disponible": true,
+    "verificado": true,
+    "financiable": true,
+    "etiquetas": [
+      "AUTOMATICO/ FINANCIA 100%"
+    ],
+    "fotos": [
+      "img/vehiculos/auto-uti5dj.webp",
+      "img/vehiculos/auto-nhiiry.webp",
+      "img/vehiculos/auto-zjbhop.webp",
+      "img/vehiculos/auto-zgjrmj.webp",
+      "img/vehiculos/auto-g9qscu.webp",
+      "img/vehiculos/auto-ngsnls.webp",
+      "img/vehiculos/auto-xty05b.webp"
+    ],
+    "descripcion": "FIAT PALIO ESSENCE 2017 AUTOMÁTICO ¡Comodidad, diseño y practicidad para todos tus días! Un hatchback ideal para la ciudad, con buen espacio interior y la comodidad de la transmisión automatizada.",
+    "equipamiento": [
+      "Año 2017",
+      "✅ Versión Essence",
+      "✅ Transmisión automatizada Dualogic",
+      "✅ Motor 1.6 16 válvulas",
+      "✅ Aire acondicionado",
+      "✅ Dirección asistida",
+      "✅ Levantavidrios eléctricos",
+      "✅ Cierre centralizado",
+      "✅ Doble airbag frontal",
+      "✅ Frenos ABS",
+      "✅ Excelente opción para uso urbano y viajes"
+    ],
+    "fichaExtra": {}
+  },
+  {
     "id": "ford-ecosport-xls-2012",
     "marca": "FORD",
     "modelo": "ECOSPORT XLS 2012",
