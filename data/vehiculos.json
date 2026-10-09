@@ -1,5 +1,48 @@
 [
   {
+    "id": "ford-ecosport-xls-2012",
+    "marca": "FORD",
+    "modelo": "ECOSPORT XLS 2012",
+    "anio": 2012,
+    "km": 195000,
+    "combustible": "GNC",
+    "transmision": "Manual",
+    "tipo": "suv",
+    "precio": 13500000,
+    "moneda": "ARS",
+    "estado": "usado",
+    "destacado": true,
+    "disponible": true,
+    "verificado": true,
+    "financiable": true,
+    "etiquetas": [
+      "GNC / FINANCIA 100%"
+    ],
+    "fotos": [
+      "img/vehiculos/auto-0u4fun.webp",
+      "img/vehiculos/auto-ve3why.webp",
+      "img/vehiculos/auto-8ju0e4.webp",
+      "img/vehiculos/auto-ukxdyd.webp",
+      "img/vehiculos/auto-r17c8z.webp",
+      "img/vehiculos/auto-bc5iog.webp",
+      "img/vehiculos/auto-kcb5d7.webp",
+      "img/vehiculos/auto-xsb6np.webp"
+    ],
+    "descripcion": "FORD ECOSPORT XLS 2012 CON GNC ¡Una SUV ideal para la familia! Cómoda, versátil y con la economía del GNC para disfrutar de cada viaje gastando menos.",
+    "equipamiento": [
+      "Año 2012",
+      "✅ Motor naftero con equipo de GNC",
+      "✅ Caja manual",
+      "✅ Capacidad para 5 pasajeros",
+      "✅ 5 puertas",
+      "✅ Tracción delantera",
+      "✅ Posición de manejo elevada",
+      "✅ Buen espacio interior y baúl",
+      "✅ Ideal para uso diario, ciudad y ruta"
+    ],
+    "fichaExtra": {}
+  },
+  {
     "id": "hero-hunk-160-4v",
     "marca": "HERO",
     "modelo": "HUNK 160 4V",
