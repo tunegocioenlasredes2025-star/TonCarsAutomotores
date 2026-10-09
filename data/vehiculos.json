@@ -1,5 +1,37 @@
 [
   {
+    "id": "ford-ecosport-titanium-1-6l-mt-n",
+    "marca": "FORD",
+    "modelo": "ECOSPORT TITANIUM 1.6L MT N",
+    "anio": 2013,
+    "km": 130000,
+    "combustible": "Nafta",
+    "transmision": "Manual",
+    "tipo": "suv",
+    "precio": 11000,
+    "moneda": "USD",
+    "estado": "usado",
+    "destacado": true,
+    "disponible": true,
+    "verificado": true,
+    "financiable": true,
+    "etiquetas": [
+      "UNICO DUEÑO/ FINANCIA 100%"
+    ],
+    "fotos": [
+      "img/vehiculos/auto-0x4ern.webp",
+      "img/vehiculos/auto-0l392f.webp",
+      "img/vehiculos/auto-wisom6.webp",
+      "img/vehiculos/auto-9ktjs7.webp",
+      "img/vehiculos/auto-i51lq7.webp",
+      "img/vehiculos/auto-l11rhu.webp",
+      "img/vehiculos/auto-kaylx6.webp"
+    ],
+    "descripcion": "FORD ECOSPORT TITANIUM 2013 ¡Diseño, confort y tecnología en una SUV ideal para toda la familia! ✅ Motor confiable y excelente posición de manejo. ✅ Amplio espacio interior y buena capacidad de baúl. ✅ Aire acondicionado. ✅ Dirección asistida. ✅ Levantavidrios eléctricos. ✅ Cierre centralizado. ✅ Equipamiento de confort y seguridad. ✅ Excelente despeje del suelo, ideal para ciudad y ruta. ✅ Diseño moderno y gran versatilidad.",
+    "equipamiento": [],
+    "fichaExtra": {}
+  },
+  {
     "id": "honda-fit-e-xl-automatico",
     "marca": "HONDA",
     "modelo": "FIT E-XL AUTOMATICO",
