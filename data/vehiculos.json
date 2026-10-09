@@ -1,5 +1,50 @@
 [
   {
+    "id": "hero-hunk-160-4v",
+    "marca": "HERO",
+    "modelo": "HUNK 160 4V",
+    "anio": 2026,
+    "km": 110,
+    "combustible": "Nafta",
+    "transmision": "Manual",
+    "tipo": "moto",
+    "precio": 4000000,
+    "moneda": "ARS",
+    "estado": "usado",
+    "destacado": true,
+    "disponible": true,
+    "verificado": true,
+    "financiable": true,
+    "etiquetas": [
+      "COMO NUEVA / FINANCIA SOLO CON"
+    ],
+    "fotos": [
+      "img/vehiculos/auto-gye1as.webp",
+      "img/vehiculos/auto-ejo1yr.webp",
+      "img/vehiculos/auto-gt66ic.webp",
+      "img/vehiculos/auto-byf1o4.webp",
+      "img/vehiculos/auto-et6rdw.webp",
+      "img/vehiculos/auto-t7t3b2.webp",
+      "img/vehiculos/auto-h07bkw.webp",
+      "img/vehiculos/auto-fgyeyh.webp"
+    ],
+    "descripcion": "HERO HUNK 160R 4V — MODELO 2026 Deportividad, tecnología y potencia en una sola moto. Una naked deportiva ideal para moverte por la ciudad con estilo, comodidad y excelente respuesta",
+    "equipamiento": [
+      "Motor de 163 cc, 4 válvulas",
+      "✅ Inyección electrónica",
+      "✅ Potencia de 16,63 HP",
+      "✅ Caja manual de 5 velocidades",
+      "✅ Freno delantero a disco con ABS",
+      "✅ Freno trasero a disco",
+      "✅ Iluminación full LED",
+      "✅ Tablero digital con indicador de marcha",
+      "✅ Suspensión trasera monoamortiguador regulable",
+      "✅ Arranque eléctrico y a pedal",
+      "✅ Tanque de combustible de 12 litros"
+    ],
+    "fichaExtra": {}
+  },
+  {
     "id": "chevrolet-captiva-lt-2-4-mt",
     "marca": "CHEVROLET",
     "modelo": "CAPTIVA LT 2.4 MT",
