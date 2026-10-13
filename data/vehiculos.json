@@ -464,38 +464,6 @@
     }
   },
   {
-    "id": "renault-fluence-luxe-2015",
-    "marca": "Renault",
-    "modelo": "Fluence PH2 2.0 Luxe Pack Cuero",
-    "anio": 2015,
-    "km": 81200,
-    "combustible": "Nafta",
-    "transmision": "Manual",
-    "tipo": "sedan",
-    "precio": 16500000,
-    "moneda": "ARS",
-    "estado": "usado",
-    "destacado": false,
-    "disponible": true,
-    "verificado": true,
-    "financiable": true,
-    "etiquetas": [
-      "VENDIDO"
-    ],
-    "fotos": [
-      "img/vehiculos/renault-fluence-luxe-2015-4.webp",
-      "img/vehiculos/renault-fluence-luxe-2015-1.webp",
-      "img/vehiculos/renault-fluence-luxe-2015-2.webp",
-      "img/vehiculos/renault-fluence-luxe-2015-3.webp"
-    ],
-    "descripcion": "Renault Fluence 2.0 Luxe Pack Cuero, modelo 2015. Sedán espacioso y confortable, con tapizado de cuero y uno de los equipamientos más completos de su gama. 81.200 km.",
-    "equipamiento": [],
-    "fichaExtra": {
-      "Motor": "2.0 16V",
-      "Color": "Gris"
-    }
-  },
-  {
     "id": "renault-kardian-blanco-0km",
     "marca": "Renault",
     "modelo": "Kardian Evolution 200 EDC Pack ADAS",
