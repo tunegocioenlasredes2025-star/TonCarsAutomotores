@@ -1,5 +1,52 @@
 [
   {
+    "id": "volkswagen-gol-trend",
+    "marca": "VOLKSWAGEN",
+    "modelo": "GOL TREND",
+    "anio": 2020,
+    "km": 10300,
+    "combustible": "Nafta",
+    "transmision": "Automática",
+    "tipo": "hatchback",
+    "precio": 14500,
+    "moneda": "USD",
+    "estado": "usado",
+    "destacado": true,
+    "disponible": true,
+    "verificado": true,
+    "financiable": true,
+    "etiquetas": [
+      "OPORTUNIDAD / FINANCIA 100%"
+    ],
+    "fotos": [
+      "img/vehiculos/auto-neg8jg.webp",
+      "img/vehiculos/auto-gw9jj9.webp",
+      "img/vehiculos/auto-e9q43l.webp",
+      "img/vehiculos/auto-7wb3e2.webp",
+      "img/vehiculos/auto-m3xyxy.webp",
+      "img/vehiculos/auto-bdyylf.webp",
+      "img/vehiculos/auto-4mgpq4.webp",
+      "img/vehiculos/auto-ygttvg.webp",
+      "img/vehiculos/auto-f2wg4k.webp",
+      "img/vehiculos/auto-aifde1.webp",
+      "img/vehiculos/volkswagen-gol-trend-rwobli.webp",
+      "img/vehiculos/volkswagen-gol-trend-f04ty3.webp",
+      "img/vehiculos/volkswagen-gol-trend-i5nt29.webp"
+    ],
+    "descripcion": "¡IMPECABLE! SOLO 10.000 KM Si buscás comodidad, confiabilidad y practicidad, este Gol Trend es para vos.",
+    "equipamiento": [
+      "Año 2020",
+      "✅ Transmisión automática",
+      "✅ ¡Solo 10.000 km!",
+      "✅ Excelente estado",
+      "✅ Ideal para la ciudad y para disfrutar en ruta",
+      "✅ Diseño moderno, compacto y funcional",
+      "✅ Bajo costo de mantenimiento",
+      "💥 Una oportunidad única por su bajísimo kilometraje."
+    ],
+    "fichaExtra": {}
+  },
+  {
     "id": "fiat-palio-1-6-16v-essence-at",
     "marca": "FIAT",
     "modelo": "PALIO 1.6 16V ESSENCE AT",
