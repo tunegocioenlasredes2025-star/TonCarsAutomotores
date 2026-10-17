@@ -413,39 +413,6 @@
     }
   },
   {
-    "id": "honda-glh-150-2026",
-    "marca": "Honda",
-    "modelo": "GLH 150",
-    "anio": 2026,
-    "km": 980,
-    "combustible": "Nafta",
-    "transmision": "Manual",
-    "tipo": "moto",
-    "precio": 4500000,
-    "moneda": "ARS",
-    "estado": "usado",
-    "destacado": true,
-    "disponible": true,
-    "verificado": true,
-    "financiable": true,
-    "etiquetas": [
-      "Como nueva",
-      "980 km"
-    ],
-    "fotos": [
-      "img/vehiculos/honda-glh-150-2026-1.webp",
-      "img/vehiculos/honda-glh-150-2026-2.webp",
-      "img/vehiculos/honda-glh-150-2026-3.webp",
-      "img/vehiculos/honda-glh-150-2026-4.webp"
-    ],
-    "descripcion": "Honda GLH 150 modelo 2026 con apenas 980 km: prácticamente 0 km. Moto ideal para ciudad y trabajo diario, con bajo consumo, arranque eléctrico y la respaldo de la red oficial Honda.",
-    "equipamiento": [],
-    "fichaExtra": {
-      "Cilindrada": "150 cc",
-      "Color": "Negra y roja"
-    }
-  },
-  {
     "id": "peugeot-308-sport-2014",
     "marca": "Peugeot",
     "modelo": "308 Sport THP",
