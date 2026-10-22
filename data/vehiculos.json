@@ -1,5 +1,51 @@
 [
   {
+    "id": "suzuki-fun-1-4",
+    "marca": "SUZUKI",
+    "modelo": "FUN 1.4",
+    "anio": 2010,
+    "km": 204000,
+    "combustible": "Nafta",
+    "transmision": "Manual",
+    "tipo": "hatchback",
+    "precio": 9200000,
+    "moneda": "ARS",
+    "estado": "usado",
+    "destacado": true,
+    "disponible": true,
+    "verificado": true,
+    "financiable": true,
+    "etiquetas": [
+      "ECONOMICO / FINANCIA 100%"
+    ],
+    "fotos": [
+      "img/vehiculos/auto-9uanqn.webp",
+      "img/vehiculos/auto-te69mu.webp",
+      "img/vehiculos/auto-48j1kr.webp",
+      "img/vehiculos/auto-c8irh3.webp",
+      "img/vehiculos/auto-yc9h7h.webp",
+      "img/vehiculos/auto-kcekbc.webp",
+      "img/vehiculos/auto-kx2qwz.webp",
+      "img/vehiculos/auto-9szynj.webp",
+      "img/vehiculos/auto-24zbqu.webp",
+      "img/vehiculos/auto-i0yhsa.webp",
+      "img/vehiculos/auto-ed5937.webp",
+      "img/vehiculos/auto-0631rl.webp",
+      "img/vehiculos/auto-pcum2x.webp",
+      "img/vehiculos/auto-z2rqps.webp"
+    ],
+    "descripcion": "Práctico, económico y ágil para todos los días! El Suzuki Fun es un compacto ideal para moverse por la ciudad, estacionar fácilmente y disfrutar de un vehículo con mecánica sencilla y buen rendimiento.",
+    "equipamiento": [
+      "Motor 1.4 nafta",
+      "✅ Caja manual",
+      "✅ Diseño compacto y juvenil",
+      "✅ Ideal para uso urbano",
+      "✅ Cómodo y práctico para el día a día",
+      "✅ Excelente opción como primer auto"
+    ],
+    "fichaExtra": {}
+  },
+  {
     "id": "volkswagen-gol-trend",
     "marca": "VOLKSWAGEN",
     "modelo": "GOL TREND",
@@ -55,7 +101,7 @@
     "combustible": "Nafta",
     "transmision": "Automática",
     "tipo": "hatchback",
-    "precio": 14500000,
+    "precio": 15000000,
     "moneda": "ARS",
     "estado": "usado",
     "destacado": true,
@@ -63,7 +109,7 @@
     "verificado": true,
     "financiable": true,
     "etiquetas": [
-      "AUTOMATICO/ FINANCIA 100%"
+      "VENDIDO"
     ],
     "fotos": [
       "img/vehiculos/auto-uti5dj.webp",
