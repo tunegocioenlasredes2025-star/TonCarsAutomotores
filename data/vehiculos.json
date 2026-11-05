@@ -1,5 +1,57 @@
 [
   {
+    "id": "ford-focus-trend-1-6",
+    "marca": "FORD",
+    "modelo": "FOCUS TREND 1.6",
+    "anio": 2011,
+    "km": 229307,
+    "combustible": "Nafta",
+    "transmision": "Manual",
+    "tipo": "hatchback",
+    "precio": 10000000,
+    "moneda": "ARS",
+    "estado": "usado",
+    "destacado": false,
+    "disponible": true,
+    "verificado": true,
+    "financiable": true,
+    "etiquetas": [
+      "EXCELENTE / FINANCIA 100%"
+    ],
+    "fotos": [
+      "img/vehiculos/ford-focus-trend-1-6-gvkpa9.webp",
+      "img/vehiculos/ford-focus-trend-1-6-llvysr.webp",
+      "img/vehiculos/ford-focus-trend-1-6-5wb2kl.webp",
+      "img/vehiculos/ford-focus-trend-1-6-vy84v4.webp",
+      "img/vehiculos/ford-focus-trend-1-6-2tbzzg.webp",
+      "img/vehiculos/ford-focus-trend-1-6-gii06o.webp",
+      "img/vehiculos/ford-focus-trend-1-6-72p94a.webp",
+      "img/vehiculos/ford-focus-trend-1-6-oe00nt.webp",
+      "img/vehiculos/ford-focus-trend-1-6-jcqeoy.webp",
+      "img/vehiculos/ford-focus-trend-1-6-ocuv3p.webp",
+      "img/vehiculos/ford-focus-trend-1-6-y6h91f.webp",
+      "img/vehiculos/ford-focus-trend-1-6-e7ornw.webp",
+      "img/vehiculos/ford-focus-trend-1-6-qon28y.webp",
+      "img/vehiculos/ford-focus-trend-1-6-5i388z.webp"
+    ],
+    "descripcion": "Ford Focus Trend modelo 2011, motor 1.6 naftero, 5 puertas, con excelente combinación de confort, diseño y rendimiento. Vehículo ideal para uso diario, ciudad y ruta, con buen espacio interior y amplio baúl.",
+    "equipamiento": [
+      "Marca: Ford",
+      "Modelo: Focus Trend",
+      "Año: 2011",
+      "Motor: 1.6 nafta",
+      "Carrocería: Hatchback 5 puertas",
+      "Transmisión: Manual",
+      "Combustible: Nafta",
+      "Dirección asistida",
+      "Aire acondicionado",
+      "Levantavidrios eléctricos (según equipamiento)",
+      "Cierre centralizado (según equipamiento)",
+      "Una excelente opción para quienes buscan comodidad, confiabilidad y economía de "
+    ],
+    "fichaExtra": {}
+  },
+  {
     "id": "chevrolet-agile-lt",
     "marca": "CHEVROLET",
     "modelo": "AGILE LT",
